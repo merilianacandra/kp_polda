@@ -113,41 +113,16 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/email1" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="150dp"
-            android:layout_height="18dp"
-            android:layout_marginTop="8dp"
-            android:text="Lupa Kata Sandi ?"
-            android:textAlignment="center"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
-
         <Button
             android:id="@+id/btnlogin"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:layout_marginBottom="37dp"
             android:background="#0045BB"
             android:text="Login"
             android:textColor="#ffffff"
-            app:layout_constraintBottom_toTopOf="@+id/btndaftar"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-        <TextView
-            android:id="@+id/btndaftar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="52dp"
-            android:text="Belum Punya Akun? Daftar"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnlogin" />
+            tools:layout_editor_absoluteY="539dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
