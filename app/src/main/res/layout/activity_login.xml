@@ -74,18 +74,12 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/login_not_have_account"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:gravity="center"
-            android:orientation="horizontal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            android:orientation="horizontal">
 
         </LinearLayout>
+
         <EditText
             android:id="@+id/email1"
             android:layout_width="wrap_content"
