@@ -115,9 +115,9 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/surat_keluar"
+                    android:src="@drawable/keluar"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="120dp"
+                    android:layout_width="150dp"
                     android:layout_height="100dp" />
 
                 <TextView
@@ -157,19 +157,19 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back3"
+                    android:src="@drawable/disposisi"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
-                    android:textAlignment="center"
-                    android:text="Text3"
-                    android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:text="Disposisi"
+                    android:textAlignment="center"
+                    android:textColor="#000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -196,16 +196,16 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back4"
+                    android:src="@drawable/referensi"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="130dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text4"
+                    android:text="Referensi"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -237,14 +237,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back5"
+                    android:src="@drawable/statistik"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="90dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text"
+                    android:text="Statistik"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"
@@ -276,14 +276,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back6"
+                    android:src="@drawable/profile"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="100dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text2"
+                    android:text="Profile"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"
