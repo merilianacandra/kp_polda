@@ -100,7 +100,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back2"
+                    android:src="@drawable/logo"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -142,7 +142,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back3"
+                    android:src="@drawable/logo"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -181,7 +181,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back4"
+                    android:src="@drawable/logo"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -222,7 +222,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back5"
+                    android:src="@drawable/logo"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
@@ -261,7 +261,7 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/ic_back6"
+                    android:src="@drawable/logo"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" />
