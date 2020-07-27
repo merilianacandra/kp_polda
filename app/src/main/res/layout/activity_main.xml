@@ -13,16 +13,31 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/colorPrimaryDark">
+        android:background="#F86F6F">
 
         <TextView
-            android:id="@+id/textGrid"
-            android:text="GRID LAYOUT"
-            android:textSize="34sp"
-            android:textColor="#000"
-            android:layout_centerInParent="true"
+            android:id="@+id/textnama"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="39dp"
+            android:layout_marginEnd="127dp"
+            android:text="Sonia Ginasari"
+            android:textColor="#ffffff"
+            android:textSize="26sp" />
+
+        <TextView
+            android:id="@+id/textjabatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="184dp"
+            android:layout_marginBottom="36dp"
+            android:text="Kabid"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
 
     </RelativeLayout>
 
@@ -61,18 +76,18 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/login"
+                    android:src="@drawable/surat_masuk"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="20dp"
-                    android:layout_height="20dp" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text"
+                    android:text="Surat Masuk"
                     android:textColor="#000"
-                    android:textSize="25sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
@@ -100,18 +115,18 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/logo"
+                    android:src="@drawable/keluar"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text2"
+                    android:text="Surat Keluar"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
@@ -142,19 +157,19 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/logo"
+                    android:src="@drawable/disposisi"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="Disposisi"
                     android:textAlignment="center"
-                    android:text="Text3"
                     android:textColor="#000"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
@@ -181,18 +196,18 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/logo"
+                    android:src="@drawable/referensi"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text4"
+                    android:text="Referensi"
                     android:textColor="#000"
-                    android:textSize="18sp"
+                    android:textSize="20sp"
                     android:textStyle="bold"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
@@ -222,18 +237,18 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/logo"
+                    android:src="@drawable/statistik"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text"
+                    android:text="Statistik"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120dp"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
@@ -261,18 +276,18 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/logo"
+                    android:src="@drawable/profile"
                     android:layout_gravity="center_horizontal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content" />
+                    android:layout_width="120dp"
+                    android:layout_height="100dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Text2"
+                    android:text="Profile"
                     android:textColor="#000"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_width="wrap_content"
+                    android:layout_width="120"
                     android:layout_height="wrap_content" />
 
             </LinearLayout>
