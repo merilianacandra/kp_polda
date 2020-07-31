@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.GridLayout;
@@ -32,5 +33,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    public void profile(View view) {
+        Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
+        startActivity(intent);
+    }
+
+    public void surat_masuk(View view) {
+        Intent intent = new Intent(MainActivity.this, SuratMasukActivity.class);
+        startActivity(intent);
+    }
+
+    public void surat_keluar(View view) {
+        Intent intent = new Intent(MainActivity.this, SuratKeluarActivity.class);
+        startActivity(intent);
     }
 }

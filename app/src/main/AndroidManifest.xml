@@ -21,9 +21,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
+        <activity android:name=".ProfileActivity" />
         <activity android:name=".DetailSuratMasukActivityActivity" />
-        <activity android:name=".SuratKeluarActivityActivity" />
-        <activity android:name=".SuratMasukActivityActivity" />
+        <activity android:name=".SuratKeluarActivity" />
+        <activity android:name=".SuratMasukActivity" />
         <activity android:name=".MainActivity">
         </activity>
     </application>

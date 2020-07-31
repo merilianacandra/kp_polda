@@ -74,6 +74,7 @@
                 android:layout_margin="16dp"
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
+                android:onClick="surat_masuk"
                 android:layout_height="wrap_content">
 
                 <ImageView
@@ -112,6 +113,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical"
+                android:onClick="surat_keluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -323,6 +325,7 @@
             <LinearLayout
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
+                android:onClick="profile"
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
