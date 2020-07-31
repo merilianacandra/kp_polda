@@ -199,14 +199,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/reference"
+                    android:src="@drawable/disposisikeluar"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="90dp"
                     android:layout_height="70dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Referensi"
+                    android:text="Disposisi Keluar"
                     android:textColor="@color/colorBlack"
                     android:textSize="20sp"
                     android:textStyle="bold"
@@ -279,14 +279,14 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
-                    android:src="@drawable/man"
+                    android:src="@drawable/reference"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="90dp"
                     android:layout_height="70dp" />
 
                 <TextView
                     android:textAlignment="center"
-                    android:text="Profile"
+                    android:text="Referensi"
                     android:textColor="@color/colorBlack"
                     android:textSize="18sp"
                     android:textStyle="bold"
