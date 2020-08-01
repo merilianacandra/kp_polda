@@ -13,6 +13,19 @@
         android:layout_height="wrap_content"
         android:paddingTop="64dp">
 
+        <ImageView
+            android:id="@+id/login_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
         <TextView
             android:id="@+id/login_title2"
             android:layout_width="wrap_content"
@@ -28,41 +41,31 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/login_image"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="12dp"
-            android:layout_marginEnd="24dp"
-            android:src="@drawable/logo"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.495"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <EditText
             android:id="@+id/txt_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:layout_marginTop="24dp"
             android:layout_weight="1"
             android:ems="10"
+            android:background="@drawable/gradient_background2"
             android:inputType="textEmailAddress"
-            android:hint="Masukan Username"
-            android:textColorHint="#ffffff"
+            android:hint="  Masukan Username"
+            android:textColorHint="#F86060"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/login_title2" />
 
         <EditText
             android:id="@+id/txt_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="350dp"
+            android:layout_height="60dp"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPassword"
-            android:hint="Masukkan Kata Sandi"
-            android:textColorHint="#ffffff"
+            android:hint="  Masukkan Kata Sandi"
+            android:background="@drawable/gradient_background2"
+            android:textColorHint="#F86060"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txt_username" />
