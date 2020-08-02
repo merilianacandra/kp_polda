@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ReferensiActivity"></activity>
+        <activity android:name=".ReferensiSatuanKerjaActivity"></activity>
+        <activity android:name=".ReferensiKodeArsipActivity" />
+        <activity android:name=".ReferensiKlasifikasiSuratActivity" />
+        <activity android:name=".ReferensiNaskahDinasActivity" />
+        <activity android:name=".ReferensiPegawaiActivity" />
+        <activity android:name=".ReferensiActivity" />
         <activity android:name=".DetailSuratMasukActivityActivity" />
         <activity android:name=".SuratKeluarActivity" />
         <activity android:name=".SuratMasukActivity" />

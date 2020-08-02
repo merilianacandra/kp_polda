@@ -5,10 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".StatistikActivity"
-    android:background="@color/colorPrimary">
+    android:background="#950217">
 
     <LinearLayout
-        android:id="@+id/bulan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/shape"
@@ -45,20 +44,28 @@
             android:layout_marginBottom="5dp"
             android:layout_marginRight="10dp">
 
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/inbox" />
+
             <TextView
-                android:layout_width="300dp"
+                android:id="@+id/stat_suratmasuk"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="Surat Masuk"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
-                android:paddingLeft="10dp"
-                />
+                android:paddingLeft="10dp" />
 
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/inbox" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -70,20 +77,28 @@
             android:layout_marginBottom="5dp"
             android:layout_marginRight="10dp">
 
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/upload" />
+
             <TextView
-                android:layout_width="300dp"
+                android:id="@+id/stat_suratkeluar"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="Surat Keluar"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
-                android:paddingLeft="10dp"
-                />
+                android:paddingLeft="10dp" />
 
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/upload" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -95,20 +110,29 @@
             android:layout_marginBottom="5dp"
             android:layout_marginRight="10dp">
 
+
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/disposisimasuk" />
+
             <TextView
-                android:layout_width="300dp"
+                android:id="@+id/stat_disposisimasuk"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="Disposisi Masuk"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
-                android:paddingLeft="10dp"
-                android:textStyle="" />
+                android:paddingLeft="10dp" />
 
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/disposisimasuk" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -120,21 +144,28 @@
             android:layout_marginBottom="5dp"
             android:layout_marginRight="10dp">
 
+            <ImageView
+                android:layout_marginLeft="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/disposisikeluar" />
+
             <TextView
-                android:id="@+id/stat_disposisimasuk"
-                android:layout_width="300dp"
+                android:id="@+id/stat_disposisikeluar"
+                android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="Disposisi Keluar"
                 android:textColor="@color/colorBlack"
                 android:textSize="16dp"
-                android:paddingLeft="10dp"
-                android:textStyle="" />
+                android:paddingLeft="10dp" />
 
-            <ImageView
-                android:layout_marginLeft="20dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/disposisikeluar" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
         </LinearLayout>
     </LinearLayout>
 </RelativeLayout>
