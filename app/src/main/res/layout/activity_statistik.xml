@@ -1,9 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StatistikActivity">
+    tools:context=".StatistikActivity"
+    android:background="@color/colorPrimary">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/bulan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:text="Bulan"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Surat Masuk"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/inbox" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Surat Keluar"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/upload" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Disposisi Masuk"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp"
+                android:textStyle="" />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/disposisimasuk" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/stat_disposisimasuk"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Disposisi Keluar"
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp"
+                android:paddingLeft="10dp"
+                android:textStyle="" />
+
+            <ImageView
+                android:layout_marginLeft="20dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/disposisikeluar" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
