@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".DetailSuratMasukActivityActivity"></activity>
+        <activity android:name=".StatistikActivity"></activity>
+        <activity android:name=".DetailSuratMasukActivityActivity" />
         <activity android:name=".SuratKeluarActivityActivity" />
         <activity android:name=".SuratMasukActivityActivity" />
         <activity android:name=".MainActivity">
