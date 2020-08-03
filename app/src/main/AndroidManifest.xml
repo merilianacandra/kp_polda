@@ -27,6 +27,11 @@
         <activity android:name=".SuratMasukActivity" />
         <activity android:name=".ReferensiActivity" />
         <activity android:name=".StatistikActivity" />
+        <activity android:name=".ReferensiSatuanKerjaActivity" />
+        <activity android:name=".ReferensiNaskahDinasActivity" />
+        <activity android:name=".ReferensiKodeArsipActivity" />
+        <activity android:name=".ReferensiKlasifikasiSuratActivity" />
+        <activity android:name=".ReferensiPegawaiActivity" />
         <activity android:name=".MainActivity">
         </activity>
     </application>
