@@ -25,6 +25,8 @@
         <activity android:name=".DetailSuratMasukActivityActivity" />
         <activity android:name=".SuratKeluarActivity" />
         <activity android:name=".SuratMasukActivity" />
+        <activity android:name=".ReferensiActivity" />
+        <activity android:name=".StatistikActivity" />
         <activity android:name=".MainActivity">
         </activity>
     </application>

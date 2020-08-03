@@ -156,6 +156,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical"
+                android:onClick="disposisi_masuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -195,6 +196,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical"
+                android:onClick="disposisi_keluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -236,6 +238,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical"
+                android:onClick="statistik"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
@@ -275,6 +278,7 @@
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_margin="16dp"
                 android:orientation="vertical"
+                android:onClick="referensi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
