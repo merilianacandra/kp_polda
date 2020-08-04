@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SuratMasukActivity"
+    tools:context=".SuratKeluarActivity"
     android:background="@color/colorBackgroud">
 
     <LinearLayout
@@ -16,6 +16,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="30dp"
+        android:onClick="det_surat_keluar"
         android:orientation="vertical"
         >
 
@@ -63,10 +64,7 @@
                 android:textStyle="bold"
                 />
 
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="30dp"
-                android:src="@drawable/centang2"/>
+
         </LinearLayout>
 
         <TextView

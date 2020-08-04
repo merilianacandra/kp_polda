@@ -61,8 +61,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void disposisi_keluar(View view) {
+        Intent intent = new Intent(MainActivity.this, DisposisiKeluarActivity.class);
+        startActivity(intent);
     }
 
     public void disposisi_masuk(View view) {
+        Intent intent = new Intent(MainActivity.this, DisposisiMasukActivity.class);
+        startActivity(intent);
     }
 }
