@@ -45,12 +45,13 @@ public class LoginActivity extends AppCompatActivity {
 
     public final static String TAG_USERNAME = "username";
     public final static String TAG_ID = "id";
+    public final static String TAG_JABATAN= "jabatan";
 
     String tag_json_obj = "json_obj_req";
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username;
+    String id, username, jabatan;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -79,11 +80,13 @@ public class LoginActivity extends AppCompatActivity {
         session = sharedpreferences.getBoolean(session_status, false);
         id = sharedpreferences.getString(TAG_ID, null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
+        jabatan = sharedpreferences.getString(TAG_JABATAN, null);
 
         if (session) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             intent.putExtra(TAG_ID, id);
             intent.putExtra(TAG_USERNAME, username);
+            intent.putExtra(TAG_JABATAN, jabatan);
             finish();
             startActivity(intent);
         }
@@ -146,12 +149,14 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putBoolean(session_status, true);
                         editor.putString(TAG_ID, id);
                         editor.putString(TAG_USERNAME, username);
+                        editor.putString(TAG_JABATAN, jabatan);
                         editor.commit();
 
                         // Memanggil main activity
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                         intent.putExtra(TAG_ID, id);
                         intent.putExtra(TAG_USERNAME, username);
+                        intent.putExtra(TAG_JABATAN, jabatan);
                         finish();
                         startActivity(intent);
                     } else {
