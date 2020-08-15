@@ -16,12 +16,13 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
 
-    TextView txt_username;
-    String id, username;
+    TextView txt_username, txt_jabatan;
+    String id, username,jabatan;
     SharedPreferences sharedpreferences;
 
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
+    public static final String TAG_JABATAN = "jabatan";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +30,17 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gridLayout=(GridLayout)findViewById(R.id.mainGrid);
 
-        txt_username = (TextView) findViewById(R.id.username);
+        txt_username = (TextView) findViewById(R.id.textnama);
+        txt_jabatan = (TextView) findViewById(R.id.textjabatan);
 
         sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
 
         id = getIntent().getStringExtra(TAG_ID);
         username = getIntent().getStringExtra(TAG_USERNAME);
+        jabatan = getIntent().getStringExtra(TAG_JABATAN);
 
         txt_username.setText("USERNAME : " + username);
+        txt_jabatan.setText("JABATAN : " + jabatan);
         setSingleEvent(gridLayout);
 
     }

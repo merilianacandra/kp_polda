@@ -139,6 +139,7 @@ public class LoginActivity extends AppCompatActivity {
                     if (success == 1) {
                         String username = jObj.getString(TAG_USERNAME);
                         String id = jObj.getString(TAG_ID);
+                        String jabatan = jObj.getString(TAG_JABATAN);
 
                         Log.e("Successfully Login!", jObj.toString());
 
