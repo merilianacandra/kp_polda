@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">SIAP BALI</string>
+    <string name="ksb_tekkom">KSB TEKKOM</string>
+    <string name="ksb_tekinfo">KSB TEKINFO</string>
+    <string name="ksb_renmin">KSB RENMIN</string>
+    <string-array name="kategori">
+        <item>Biasa</item>
+        <item>Penting</item>
+    </string-array>
 </resources>
+
+
