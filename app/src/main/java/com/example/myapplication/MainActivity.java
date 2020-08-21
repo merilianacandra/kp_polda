@@ -17,12 +17,13 @@ public class MainActivity extends AppCompatActivity {
     GridLayout gridLayout;
 
     TextView txt_username, txt_jabatan;
-    String id, username,jabatan;
+    String id, username,jabatan,id_level;
     SharedPreferences sharedpreferences;
 
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
     public static final String TAG_JABATAN = "jabatan";
+    public static final String TAG_LEVEL = "id_level";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,13 +35,17 @@ public class MainActivity extends AppCompatActivity {
         txt_jabatan = (TextView) findViewById(R.id.textjabatan);
 
         sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+        id = sharedpreferences.getString(TAG_ID,"");
+        username = sharedpreferences.getString(TAG_USERNAME,"");
+        jabatan = sharedpreferences.getString(TAG_JABATAN,"");
+        id_level = sharedpreferences.getString(TAG_LEVEL,"");
+//        id = getIntent().getStringExtra(TAG_ID);
+//        username = getIntent().getStringExtra(TAG_USERNAME);
+//        jabatan = getIntent().getStringExtra(TAG_JABATAN);
+//        id_level = getIntent().getStringExtra(TAG_LEVEL);
 
-        id = getIntent().getStringExtra(TAG_ID);
-        username = getIntent().getStringExtra(TAG_USERNAME);
-        jabatan = getIntent().getStringExtra(TAG_JABATAN);
-
-        txt_username.setText("USERNAME : " + username);
-        txt_jabatan.setText("JABATAN : " + jabatan);
+        txt_username.setText(username);
+        txt_jabatan.setText(jabatan);
         setSingleEvent(gridLayout);
 
     }
@@ -61,11 +66,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void surat_keluar(View view) {
         Intent intent = new Intent(MainActivity.this, SuratKeluarActivity.class);
+        intent.putExtra("asal", username);
         startActivity(intent);
     }
 
     public void surat_masuk(View view) {
         Intent intent = new Intent(MainActivity.this, SuratMasukActivity.class);
+        intent.putExtra("id_pegawai", id);
         startActivity(intent);
     }
 
@@ -86,11 +93,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void disposisi_keluar(View view) {
         Intent intent = new Intent(MainActivity.this, DisposisiKeluarActivity.class);
+        intent.putExtra("asal", username);
         startActivity(intent);
     }
 
     public void disposisi_masuk(View view) {
         Intent intent = new Intent(MainActivity.this, DisposisiMasukActivity.class);
+        intent.putExtra("id_level", id_level);
         startActivity(intent);
     }
 }

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:orientation="horizontal"
+    android:id="@+id/cvDisposisi"
+    android:layout_width="match_parent"
+    card_view:cardCornerRadius="15dp"
+    card_view:cardElevation="5dp"
+    android:layout_margin="5dp"
+    android:layout_height="100dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app_srb="http://schemas.android.com/tools"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:id="@+id/derajat"
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:text="Segera"
+                android:textColor="@color/colorBackgroud"
+                android:textSize="15dp"
+                android:layout_marginRight="5dp"/>
+
+            <TextView
+                android:id="@+id/tanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="02 Mar 2020"
+                android:textColor="@color/colorBlack"
+                android:textSize="15dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:id="@+id/asal"
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:text="Kabid TIK Polda Bali"
+                android:textColor="@color/colorBlack"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/perihal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tolong urus segera"
+            android:textColor="@color/colorBlack"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

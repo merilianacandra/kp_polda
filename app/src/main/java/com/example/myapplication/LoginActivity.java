@@ -46,12 +46,13 @@ public class LoginActivity extends AppCompatActivity {
     public final static String TAG_USERNAME = "username";
     public final static String TAG_ID = "id";
     public final static String TAG_JABATAN= "jabatan";
+    public final static String TAG_LEVEL= "id_level";
 
     String tag_json_obj = "json_obj_req";
 
     SharedPreferences sharedpreferences;
     Boolean session = false;
-    String id, username, jabatan;
+    String id, username, jabatan, id_level;
     public static final String my_shared_preferences = "my_shared_preferences";
     public static final String session_status = "session_status";
 
@@ -81,12 +82,14 @@ public class LoginActivity extends AppCompatActivity {
         id = sharedpreferences.getString(TAG_ID, null);
         username = sharedpreferences.getString(TAG_USERNAME, null);
         jabatan = sharedpreferences.getString(TAG_JABATAN, null);
+        id_level = sharedpreferences.getString(TAG_LEVEL, null);
 
         if (session) {
             Intent intent = new Intent(LoginActivity.this, MainActivity.class);
             intent.putExtra(TAG_ID, id);
             intent.putExtra(TAG_USERNAME, username);
             intent.putExtra(TAG_JABATAN, jabatan);
+            intent.putExtra(TAG_LEVEL, id_level);
             finish();
             startActivity(intent);
         }
@@ -140,6 +143,7 @@ public class LoginActivity extends AppCompatActivity {
                         String username = jObj.getString(TAG_USERNAME);
                         String id = jObj.getString(TAG_ID);
                         String jabatan = jObj.getString(TAG_JABATAN);
+                        String id_level = jObj.getString(TAG_LEVEL);
 
                         Log.e("Successfully Login!", jObj.toString());
 
@@ -151,6 +155,7 @@ public class LoginActivity extends AppCompatActivity {
                         editor.putString(TAG_ID, id);
                         editor.putString(TAG_USERNAME, username);
                         editor.putString(TAG_JABATAN, jabatan);
+                        editor.putString(TAG_LEVEL, id_level);
                         editor.commit();
 
                         // Memanggil main activity
@@ -158,6 +163,7 @@ public class LoginActivity extends AppCompatActivity {
                         intent.putExtra(TAG_ID, id);
                         intent.putExtra(TAG_USERNAME, username);
                         intent.putExtra(TAG_JABATAN, jabatan);
+                        intent.putExtra(TAG_LEVEL, id_level);
                         finish();
                         startActivity(intent);
                     } else {

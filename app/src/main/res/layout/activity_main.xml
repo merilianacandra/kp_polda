@@ -14,31 +14,58 @@
         android:layout_weight="2"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="#F86F6F">
+        android:background="@color/colorBackgroud">
 
         <TextView
             android:id="@+id/textnama"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:gravity="center"
             android:layout_marginTop="39dp"
-            android:layout_marginEnd="127dp"
-            android:text="Sonia Ginasari"
-            android:textColor="#ffffff"
-            android:textSize="26sp" />
+            android:text="My Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
 
         <TextView
             android:id="@+id/textjabatan"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginEnd="184dp"
-            android:layout_marginBottom="36dp"
-            android:text="Kabid"
-            android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:gravity="center_horizontal"
+            android:layout_below="@+id/textnama"
+            android:text="My Profile"
+            android:textColor="@color/colorWhite"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            />
+
+<!--        <TextView-->
+<!--            android:id="@+id/textnama"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentTop="true"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="39dp"-->
+<!--            android:layout_marginEnd="127dp"-->
+<!--            android:text="Sonia Ginasari"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:gravity="center_horizontal"-->
+<!--            android:textSize="26sp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textjabatan"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_alignParentBottom="true"-->
+<!--            android:layout_marginEnd="184dp"-->
+<!--            android:layout_marginBottom="36dp"-->
+<!--            android:text="Kabid"-->
+<!--            android:gravity="center"-->
+<!--            android:textColor="#ffffff"-->
+<!--            android:textSize="18sp" />-->
 
     </RelativeLayout>
 

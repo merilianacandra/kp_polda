@@ -1,82 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SuratKeluarActivity"
-    android:background="@color/colorBackgroud">
+    android:background="@color/colorBackgroud"
+    android:orientation="vertical">
 
-    <LinearLayout
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape"
-        android:layout_marginRight="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
-        android:onClick="det_surat_keluar"
-        android:orientation="vertical"
-        >
+        android:layout_height="match_parent"
+        android:background="@color/colorBackgroud">
 
-        <LinearLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView1"
+            android:scrollbars="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
 
-            <TextView
-                android:layout_width="250dp"
-                android:layout_height="wrap_content"
-                android:text="B/486/VII/TIK.7.6./2020/Bid TIK"
-                android:textColor="@color/colorBackgroud"
-                android:textSize="15dp"
-                android:layout_marginRight="5dp"/>
-
-            <ImageView
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:src="@drawable/centang"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="02 Mar 2020"
-                android:textColor="@color/colorBlack"
-                android:textSize="15dp"/>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp">
-            <TextView
-                android:layout_width="340dp"
-                android:layout_height="wrap_content"
-                android:text="Kementerian Kesehatan RI"
-                android:textColor="@color/colorBlack"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                />
-
-
-        </LinearLayout>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Pencegahan Penyebaran Covid-19"
-            android:textColor="@color/colorBlack"
-            android:textSize="15dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"/>
-
-    </LinearLayout>
-</RelativeLayout>
-
-
+    </ScrollView>
+</LinearLayout>

@@ -13,7 +13,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity_form_disposisi"></activity>
+        <activity android:name=".FormDisposisiActivity"></activity>
         <activity android:name=".DetailDisposisiKeluarActivity" />
         <activity android:name=".DetailDisposisiMasukActivity" />
         <activity android:name=".DisposisiKeluarActivity" />

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailSuratMasukActivityActivity"
+    tools:context=".DetailDisposisiMasukActivity"
     android:orientation="vertical">
 
     <LinearLayout
@@ -17,6 +17,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp">
         <TextView
+            android:id="@+id/derajat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Segera"
@@ -30,6 +31,7 @@
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/no_surat"
                 android:layout_width="280dp"
                 android:layout_height="wrap_content"
                 android:text="B/486/VII/TIK.7.6./2020/Bid TIK"
@@ -38,6 +40,7 @@
                 android:layout_marginRight="5dp"/>
 
             <TextView
+                android:id="@+id/tanggal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="02 Mar 2020"
@@ -66,14 +69,21 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Jenis"
+                    android:text="Jenis Naskah"
                     android:textColor="@color/colorBlack"
                     android:textSize="16sp"/>
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Kode Hal"
+                    android:text="Kode Arsip"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Lampiran"
                     android:textColor="@color/colorBlack"
                     android:textSize="16sp"/>
 
@@ -105,6 +115,13 @@
                     android:textColor="@color/colorBlack"
                     android:textSize="16sp" />
 
+                <TextView
+                    android:layout_width="10dp"
+                    android:layout_height="wrap_content"
+                    android:text=":"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
             </LinearLayout>
 
             <LinearLayout
@@ -113,6 +130,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/no_agenda"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="12"
@@ -120,6 +138,7 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/jenis_naskah_dinas"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Instruksi"
@@ -127,6 +146,15 @@
                     android:textSize="16sp" />
 
                 <TextView
+                    android:id="@+id/kode_arsip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hubungan Masyarakat"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/lampiran"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Hubungan Masyarakat"
@@ -151,6 +179,7 @@
         </LinearLayout>
 
         <TextView
+            android:id="@+id/perihal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Undangan"
@@ -160,6 +189,7 @@
             android:textSize="22sp"/>
 
         <TextView
+            android:id="@+id/isi_disposisi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Tolong urus segera dan dengan seksama "
@@ -205,6 +235,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/asal"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="KABID TIK POLDA BALI"
@@ -240,6 +271,7 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/tujuan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="KABAGRENMIN POLDA BAL"

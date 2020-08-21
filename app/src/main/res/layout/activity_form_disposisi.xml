@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#950217"
-    tools:context=".activity_form_disposisi">
+    android:background="@drawable/shape"
+    tools:context=".FormDisposisiActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
         android:layout_marginTop="10dp"
         android:layout_marginBottom="30dp"
         android:orientation="vertical"
-        >
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,8 +44,8 @@
             android:layout_marginRight="10dp">
 
             <TextView
-                android:id="@+id/form_nomorsurat"
-                android:layout_width="280dp"
+
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nomor Surat : "
                 android:textColor="@color/colorBlack"
@@ -53,6 +53,7 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/form_nomorsurat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack"
@@ -70,8 +71,7 @@
             android:layout_marginRight="10dp">
 
             <TextView
-                android:id="@+id/form_nomoragenda"
-                android:layout_width="280dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Nomor Agenda : "
                 android:textColor="@color/colorBlack"
@@ -79,6 +79,7 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/form_nomoragenda"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack"
@@ -86,49 +87,7 @@
                 android:paddingRight="20dp" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/shape1"
-            android:layout_marginLeft="10dp"
-            android:layout_marginBottom="5dp"
-            android:layout_marginRight="10dp">
 
-            <TextView
-                android:id="@+id/form_kepada"
-                android:layout_width="75dp"
-                android:layout_height="20dp"
-                android:text="Kepada : "
-                android:textColor="@color/colorBlack"
-                android:textSize="16sp"
-                android:paddingLeft="10dp" />
-
-            <CheckBox
-                android:id="@+id/ksb_tekkom"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/ksb_tekkom" />
-
-            <CheckBox
-                android:id="@+id/ksb_renmin"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
-                android:layout_marginTop="70dp"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/ksb_renmin" />
-
-            <CheckBox
-                android:id="@+id/ksb_tekinfo"
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
-                android:onClick="onCheckboxClicked"
-                android:text="@string/ksb_tekinfo" />
-
-        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -140,8 +99,7 @@
             android:layout_marginRight="10dp">
 
             <TextView
-                android:id="@+id/form_kategori"
-                android:layout_width="286dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="10dp"
                 android:text="Kategori : "
@@ -149,19 +107,13 @@
                 android:textSize="16dp" />
 
             <TextView
+                android:id="@+id/form_kategori"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack"
                 android:textSize="16sp"
                 android:paddingRight="20dp" />
 
-            <Spinner
-                android:id="@+id/edit_produk_kategori"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/kategori"
-                android:padding="20dp">
-            </Spinner>
 
         </LinearLayout>
 
@@ -175,8 +127,7 @@
             android:layout_marginRight="10dp">
 
             <TextView
-                android:id="@+id/form_perihal"
-                android:layout_width="280dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Perihal : "
                 android:textColor="@color/colorBlack"
@@ -184,6 +135,7 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/form_perihal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@color/colorBlack"
@@ -191,11 +143,90 @@
                 android:paddingRight="20dp" />
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Kepada : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/kasubag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kasubag" />
+
+            <CheckBox
+                android:id="@+id/kaur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kaur" />
+
+            <CheckBox
+                android:id="@+id/paur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Paur" />
+            <CheckBox
+                android:id="@+id/bamin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bamin" />
+        </LinearLayout>
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Isi Disposisi : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+
         <Button
-            android:id="@+id/edit_produk_update"
+            android:id="@+id/simpan_disposisi"
             android:layout_width="150dp"
             android:layout_height="50dp"
             android:layout_marginLeft="100dp"
+            android:onClick="simpan_disposisi"
             android:background="@drawable/button_rounded_white"
             android:layout_marginRight="10dp"
             android:layout_marginTop="24sp"

@@ -1,25 +1,25 @@
 package com.example.myapplication.data;
 
-public class DataSurat {
-    private String id_surat, no_surat, asal, klasifikasi_surat, tersier, derajat_surat, jenis_naskah_dinas, tgl_surat, tujuan, perihal, lampiran, isi_ringkas, file_surat, no_agenda, nama, id_level;
+public class DataDisposisi {
+    private String id_disposisi,id_surat, no_surat, asal, tujuan, tersier, derajat_surat, jenis_naskah_dinas, tgl_disposisi, perihal, lampiran, isi_disposisi, file_disposisi, no_agenda, nama, id_level;
 
-    public DataSurat() {
+    public DataDisposisi() {
     }
 
-    public DataSurat(String id_surat, String no_surat, String klasifikasi_surat, String tersier, String derajat_surat, String jenis_naskah_dinas, String asal, String tgl_surat, String tujuan, String perihal, String lampiran, String isi_ringkas, String file_surat, String no_agenda, String nama, String id_level) {
+    public DataDisposisi(String id_disposisi, String id_surat, String no_surat, String tujuan, String tersier, String derajat_surat, String jenis_naskah_dinas, String asal, String tgl_disposisi, String perihal, String lampiran, String isi_disposisi, String file_disposisi, String no_agenda, String nama, String id_level) {
+        this.id_disposisi = id_disposisi;
         this.id_surat = id_surat;
         this.no_surat = no_surat;
-        this.klasifikasi_surat = klasifikasi_surat;
         this.tersier = tersier;
         this.derajat_surat = derajat_surat;
         this.jenis_naskah_dinas = jenis_naskah_dinas;
         this.asal = asal;
-        this.tgl_surat = tgl_surat;
+        this.tgl_disposisi = tgl_disposisi;
         this.tujuan = tujuan;
         this.perihal = perihal;
         this.lampiran = lampiran;
-        this.isi_ringkas = isi_ringkas;
-        this.file_surat = file_surat;
+        this.isi_disposisi = isi_disposisi;
+        this.file_disposisi = file_disposisi;
         this.no_agenda = no_agenda;
         this.nama= nama;
         this.id_level= id_level;
@@ -41,12 +41,12 @@ public class DataSurat {
         this.no_surat = no_surat;
     }
 
-    public String getKlasifikasi_surat() {
-        return klasifikasi_surat;
+    public String getId_disposisi() {
+        return id_disposisi;
     }
 
-    public void setKlasifikasi_surat(String klasifikasi_surat) {
-        this.klasifikasi_surat = klasifikasi_surat;
+    public void setId_disposisi(String id_disposisi) {
+        this.id_disposisi= id_disposisi;
     }
 
     public String getTersier() {
@@ -81,12 +81,12 @@ public class DataSurat {
         this.asal = asal;
     }
 
-    public String getTgl_surat() {
-        return tgl_surat;
+    public String getTgl_disposisi() {
+        return tgl_disposisi;
     }
 
-    public void setTgl_surat(String tgl_surat) {
-        this.tgl_surat = tgl_surat;
+    public void setTgl_disposisi(String tgl_disposisi) {
+        this.tgl_disposisi = tgl_disposisi;
     }
 
     public String getTujuan() {
@@ -113,20 +113,20 @@ public class DataSurat {
         this.lampiran = lampiran;
     }
 
-    public String getIsi_ringkas() {
-        return isi_ringkas;
+    public String getIsi_disposisi() {
+        return isi_disposisi;
     }
 
-    public void setIsi_ringkas(String isi_ringkas) {
-        this.isi_ringkas = isi_ringkas;
+    public void setIsi_disposisi(String isi_disposisi) {
+        this.isi_disposisi = isi_disposisi;
     }
 
-    public String getFile_surat() {
-        return file_surat;
+    public String getFile_disposisi() {
+        return file_disposisi;
     }
 
-    public void setFile_surat(String file_surat) {
-        this.file_surat = file_surat;
+    public void setFile_disposisi(String file_disposisi) {
+        this.file_disposisi = file_disposisi;
     }
 
     public String getNo_agenda() {
