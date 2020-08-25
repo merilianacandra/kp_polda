@@ -6,6 +6,12 @@
     android:background="@drawable/shape"
     tools:context=".FormDisposisiActivity">
 
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -188,6 +194,14 @@
                 android:layout_height="wrap_content"
                 android:text="Bamin" />
         </LinearLayout>
+
+            <ListView
+                android:id="@+id/list_level"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem = "@layout/list_row"
+                android:dividerHeight="1dp"/>
+
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/spinner"
                 android:layout_width="wrap_content"
@@ -233,5 +247,5 @@
             android:layout_marginBottom="24sp"
             android:text="Kirim Disposisi" />
     </LinearLayout>
-
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
