@@ -34,8 +34,8 @@ public class ReferensiActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void ref_satker(View view) {
-        Intent intent = new Intent(ReferensiActivity.this, ReferensiSatuanKerjaActivity.class);
+    public void ref_derajat_surat(View view) {
+        Intent intent = new Intent(ReferensiActivity.this, ReferensiDerajatSuratActivity.class);
         startActivity(intent);
     }
 }

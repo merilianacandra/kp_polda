@@ -147,7 +147,7 @@ public class SuratKeluarActivity extends AppCompatActivity {
                                 Toast.LENGTH_SHORT).show();
                     }
                 } else if (error instanceof NetworkError || error.getCause() instanceof ConnectException
-                        || (error.getCause().getMessage() != null
+                        || (error.getMessage() != null
                         && error.getCause().getMessage().contains("connection"))){
                     Toast.makeText(SuratKeluarActivity.this, "Your device is not connected to internet.",
                             Toast.LENGTH_SHORT).show();

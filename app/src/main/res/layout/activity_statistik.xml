@@ -25,13 +25,36 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp">
             <TextView
-                android:layout_width="340dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Bulan"
                 android:textColor="@color/colorBlack"
                 android:textSize="20sp"
                 android:paddingBottom="10dp"
                 android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:id="@+id/bulan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bulan"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
+                />
+            <TextView
+                android:id="@+id/tahun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tahun"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"
+                android:layout_marginRight="10dp"
                 />
         </LinearLayout>
 
@@ -60,6 +83,7 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/jumlah_surat_masuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -93,12 +117,13 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/jumlah_surat_keluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingRight="20dp"
                 android:text="0"
                 android:textColor="@color/colorBlack"
-                android:textSize="16sp"
-                android:paddingRight="20dp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -127,6 +152,7 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/jumlah_disposisi_masuk"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -160,6 +186,7 @@
                 android:paddingLeft="10dp" />
 
             <TextView
+                android:id="@+id/jumlah_disposisi_keluar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="0"
@@ -167,5 +194,15 @@
                 android:textSize="16sp"
                 android:paddingRight="20dp" />
         </LinearLayout>
+
+        <Button
+            android:layout_marginTop="20dp"
+            android:background="@drawable/buttonstyle"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/bt_datepicker"
+            android:textColor="@color/colorWhite"
+            android:text="Pilih Tanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </RelativeLayout>

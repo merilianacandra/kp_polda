@@ -12,4 +12,11 @@
         <item name="android:windowBackground">@drawable/splashscreen</item>
     </style>
 
+    <style name="ReferensiTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorMerahTua</item>
+        <item name="colorPrimaryDark">@color/colorBackgroud</item>
+        <item name="colorAccent">@color/colorMerahPudar</item>
+    </style>
+
 </resources>

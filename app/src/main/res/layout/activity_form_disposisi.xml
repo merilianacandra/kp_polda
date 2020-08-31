@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -6,11 +11,7 @@
     android:background="@drawable/shape"
     tools:context=".FormDisposisiActivity">
 
-    <ScrollView
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -166,34 +167,25 @@
                 android:textSize="16sp"
                 android:paddingLeft="10dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
 
-            <CheckBox
-                android:id="@+id/kasubag"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kasubag" />
+            <ListView
+                android:id="@+id/list_level"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                tools:listitem = "@layout/list_row"
+                android:dividerHeight="1dp"/>
 
-            <CheckBox
-                android:id="@+id/kaur"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Kaur" />
-
-            <CheckBox
-                android:id="@+id/paur"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Paur" />
-            <CheckBox
-                android:id="@+id/bamin"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Bamin" />
-        </LinearLayout>
+            <Button
+                android:id="@+id/pilih_level"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="100dp"
+                android:onClick="pilih_level"
+                android:background="@color/colorWhite"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="24sp"
+                android:layout_marginBottom="24sp"
+                android:text="Pilih Level" />
 
             <ListView
                 android:id="@+id/list_level"
@@ -201,12 +193,6 @@
                 android:layout_height="wrap_content"
                 tools:listitem = "@layout/list_row"
                 android:dividerHeight="1dp"/>
-
-            <androidx.appcompat.widget.AppCompatSpinner
-                android:id="@+id/spinner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:spinnerMode="dropdown" />
 
         </LinearLayout>
         <LinearLayout
@@ -227,6 +213,7 @@
                 android:paddingLeft="10dp" />
 
             <EditText
+                android:id="@+id/isi_disposisi"
                 android:layout_width="match_parent"
                 android:layout_height="100dp"
                 android:background="@color/colorWhite"
@@ -247,5 +234,6 @@
             android:layout_marginBottom="24sp"
             android:text="Kirim Disposisi" />
     </LinearLayout>
-    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

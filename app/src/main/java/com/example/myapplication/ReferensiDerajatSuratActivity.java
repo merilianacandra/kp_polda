@@ -21,8 +21,10 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.example.myapplication.adapter.PegawaiAdapter;
-import com.example.myapplication.data.DataPegawai;
+import com.example.myapplication.adapter.DerajatSuratAdapter;
+import com.example.myapplication.adapter.JenisNaskahDinasAdapter;
+import com.example.myapplication.data.DataDerajatSurat;
+import com.example.myapplication.data.DataJenisNaskahDinas;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -30,19 +32,18 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 
-public class ReferensiPegawaiActivity extends AppCompatActivity {
+public class ReferensiDerajatSuratActivity extends AppCompatActivity {
 
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_pegawai.php";
+    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_derajat_surat.php";
     private static ProgressDialog mProgressDialog;
-    ArrayList<DataPegawai> dataModelArrayList;
-    private PegawaiAdapter rvAdapter;
+    ArrayList<DataDerajatSurat> dataModelArrayList;
+    private DerajatSuratAdapter rvAdapter;
     private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_referensi_pegawai);
-
+        setContentView(R.layout.activity_referensi_derajat_surat);
         recyclerView = findViewById(R.id.recycler);
 
         fetchingJSON();
@@ -71,13 +72,11 @@ public class ReferensiPegawaiActivity extends AppCompatActivity {
 
                                 for (int i = 0; i < dataArray.length(); i++) {
 
-                                    DataPegawai playerModel = new DataPegawai();
+                                    DataDerajatSurat playerModel = new DataDerajatSurat();
                                     JSONObject dataobj = dataArray.getJSONObject(i);
-                                    playerModel.setId_pegawai(dataobj.getString("id_pegawai"));
-                                    playerModel.setNama(dataobj.getString("nama"));
-                                    playerModel.setNrp(dataobj.getString("nrp"));
-                                    playerModel.setPangkat(dataobj.getString("pangkat"));
-                                    playerModel.setJabatan(dataobj.getString("jabatan"));
+                                    playerModel.setId_derajat_surat(dataobj.getString("id_derajat_surat"));
+                                    playerModel.setDerajat_surat(dataobj.getString("derajat_surat"));
+
 //                                    playerModel.setImage(dataobj.getString("foto_bengkel"));
 
                                     dataModelArrayList.add(playerModel);
@@ -111,7 +110,7 @@ public class ReferensiPegawaiActivity extends AppCompatActivity {
 
     private void setupRecycler(){
 
-        rvAdapter = new PegawaiAdapter(this,dataModelArrayList);
+        rvAdapter = new DerajatSuratAdapter(this,dataModelArrayList);
         recyclerView.setAdapter(rvAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false));
 

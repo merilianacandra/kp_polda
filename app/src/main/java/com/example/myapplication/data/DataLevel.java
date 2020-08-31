@@ -1,22 +1,22 @@
 package com.example.myapplication.data;
 
 public class DataLevel {
-    private String level;
+    private String nama;
     private boolean check;
 
     public DataLevel() {}
 
-    public DataLevel(String level, boolean check) {
-        this.level = level;
+    public DataLevel(String nama, boolean check) {
+        this.nama = nama;
         this.check = check;
     }
 
     public String getLevel() {
-        return level;
+        return nama;
     }
 
-    public void setLevel(String level) {
-        this.level = level;
+    public void setLevel(String nama) {
+        this.nama = nama;
     }
 
     public boolean isCheckbox() {

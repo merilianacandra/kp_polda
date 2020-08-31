@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,8 +41,12 @@ public class DisposisiMasukActivity extends AppCompatActivity {
     private com.example.myapplication.adapter.DisposisiMasukAdapter DisposisiMasukAdapter;
     private RecyclerView recyclerView;
     Context mContext;
-    String id_level;
+    String id_level, username;
     String tag_json_obj = "json_obj_req";
+    public static final String TAG_ID = "id";
+    public static final String TAG_USERNAME = "username";
+    SharedPreferences sharedpreferences;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,7 +56,8 @@ public class DisposisiMasukActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerView1);
 
         mContext = this;
-
+        sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+        username = sharedpreferences.getString(TAG_USERNAME,"");
         DisposisiMasukAdapter = new DisposisiMasukAdapter(mContext, DisposisiList);
         GridLayoutManager mLayoutManager = new GridLayoutManager(mContext, 1);
         recyclerView.setLayoutManager(mLayoutManager);
@@ -60,7 +66,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
 
 
 
-        select_disposisi(Integer.parseInt(id_level));
+        select_disposisi(Integer.parseInt(id_level),username);
     }
 
 //    public void det_disposisi_masuk(View view) {
@@ -68,7 +74,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    private void select_disposisi(final int idx){
+    private void select_disposisi(final int idx, final String asal){
         StringRequest strReq = new StringRequest(Request.Method.POST, URLstring, new Response.Listener<String>() {
 
             @Override
@@ -130,6 +136,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
                 // Posting parameters ke post url
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("id_level", String.valueOf(idx));
+                params.put("asal", String.valueOf(asal));
 
                 return params;
             }

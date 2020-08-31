@@ -44,7 +44,7 @@
 
                 <ImageView
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@drawable/staff" />
 
@@ -87,7 +87,7 @@
                     android:src="@drawable/naskah_dinas"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp" />
+                    android:layout_height="50dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                     android:src="@drawable/klasifikasi_surat"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp" />
+                    android:layout_height="50dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -172,7 +172,7 @@
                     android:src="@drawable/kode_arsip"
                     android:layout_gravity="center_horizontal"
                     android:layout_width="wrap_content"
-                    android:layout_height="70dp" />
+                    android:layout_height="50dp" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -187,7 +187,44 @@
 
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_marginBottom="16dp"
+            android:layout_rowWeight="1"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/shape"
+            android:onClick="ref_derajat_surat"
+            app:cardElevation="8dp"
+            app:cardCornerRadius="8dp">
 
+            <LinearLayout
+                android:layout_gravity="center_horizontal|center_vertical"
+                android:layout_margin="16dp"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/satker"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Derajat Surat"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
 
 
 
