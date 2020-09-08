@@ -292,21 +292,16 @@
             android:orientation="vertical"
             >
 
-            <LinearLayout
+            <Button
+                android:id="@+id/btn_disposisi"
+                android:textColor="#fff"
+                android:onClick="buat_disposisi"
+                android:background="@drawable/buttonstyle"
+                android:layout_marginTop="50dp"
+                android:layout_gravity="center_horizontal"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Kirim Diposisi"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20dp"
-                    android:textStyle="bold"
-                    />
-            </LinearLayout>
+                android:text="Buat Disposisi"/>
 
         </LinearLayout>
 

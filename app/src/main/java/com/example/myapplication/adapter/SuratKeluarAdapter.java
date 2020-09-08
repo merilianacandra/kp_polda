@@ -31,7 +31,7 @@ public class SuratKeluarAdapter extends RecyclerView.Adapter<SuratKeluarAdapter.
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_surat,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_surat_keluar,parent,false);
         return new MyViewHolder(view);
     }
 

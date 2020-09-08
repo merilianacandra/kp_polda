@@ -1,8 +1,10 @@
 package com.example.myapplication;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,5 +64,16 @@ public class DetailDisposisiMasukActivity extends AppCompatActivity {
         tjenis_naskah_dinas.setText(pjenis_naskah_dinas);
         tlampiran.setText(plampiran);
         ttujuan.setText(ptujuan);
+    }
+
+    public void buat_disposisi(View view) {
+        Intent intent = new Intent(DetailDisposisiMasukActivity.this, FormDisposisi2Activity.class);
+        intent.putExtra("id_surat", id_surat);
+        intent.putExtra("no_agenda", pno_agenda);
+        intent.putExtra("no_surat", pno_surat);
+        intent.putExtra("derajat_surat", pderajat_surat);
+        intent.putExtra("perihal", pperihal);
+        intent.putExtra("isi_disposisi", pisi_disposisi);
+        startActivity(intent);
     }
 }

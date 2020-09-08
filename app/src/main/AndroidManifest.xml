@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".FormDisposisiActivity"></activity>
+        <activity android:name=".FormDisposisi2Activity"></activity>
+        <activity android:name=".FormDisposisiActivity" />
         <activity android:name=".DetailDisposisiKeluarActivity" />
         <activity android:name=".DetailDisposisiMasukActivity" />
         <activity android:name=".DisposisiKeluarActivity" />
@@ -35,26 +36,26 @@
         <activity android:name=".SuratMasukActivity" />
         <activity android:name=".ReferensiActivity" />
         <activity android:name=".StatistikActivity" />
-        <activity android:name=".ReferensiDerajatSuratActivity"
+        <activity
+            android:name=".ReferensiDerajatSuratActivity"
             android:label="Data Derajat Surat"
-            android:theme="@style/ReferensiTheme">
-        </activity>
-        <activity android:name=".ReferensiNaskahDinasActivity"
+            android:theme="@style/ReferensiTheme"></activity>
+        <activity
+            android:name=".ReferensiNaskahDinasActivity"
             android:label="Data Jenis Naskah Dinas"
-            android:theme="@style/ReferensiTheme">
-        </activity>
-        <activity android:name=".ReferensiKodeArsipActivity"
+            android:theme="@style/ReferensiTheme"></activity>
+        <activity
+            android:name=".ReferensiKodeArsipActivity"
             android:label="Data Kode Arsip"
-            android:theme="@style/ReferensiTheme">
-        </activity>
-        <activity android:name=".ReferensiKlasifikasiSuratActivity"
+            android:theme="@style/ReferensiTheme"></activity>
+        <activity
+            android:name=".ReferensiKlasifikasiSuratActivity"
             android:label="Data Klasifikasi Surat"
-            android:theme="@style/ReferensiTheme">
-        </activity>
-        <activity android:name=".ReferensiPegawaiActivity"
+            android:theme="@style/ReferensiTheme"></activity>
+        <activity
+            android:name=".ReferensiPegawaiActivity"
             android:label="Data Pegawai"
-            android:theme="@style/ReferensiTheme">
-        </activity>
+            android:theme="@style/ReferensiTheme"></activity>
         <activity android:name=".MainActivity" />
     </application>
 

@@ -44,28 +44,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:background="@drawable/shape1"
             android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:layout_marginBottom="5dp"
-            android:layout_marginRight="10dp">
+            android:background="@drawable/shape1"
+            android:orientation="horizontal">
 
             <TextView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
                 android:text="Nomor Surat : "
                 android:textColor="@color/colorBlack"
-                android:textSize="16sp"
-                android:paddingLeft="10dp" />
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/form_nomorsurat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:paddingRight="20dp"
                 android:textColor="@color/colorBlack"
-                android:textSize="16sp"
-                android:paddingRight="20dp" />
+                android:textSize="16sp" />
         </LinearLayout>
 
         <LinearLayout
@@ -187,12 +187,6 @@
                 android:layout_marginBottom="24sp"
                 android:text="Pilih Level" />
 
-            <ListView
-                android:id="@+id/list_level"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                tools:listitem = "@layout/list_row"
-                android:dividerHeight="1dp"/>
 
         </LinearLayout>
         <LinearLayout

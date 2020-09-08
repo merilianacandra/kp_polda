@@ -34,17 +34,17 @@ public class StatistikActivity extends AppCompatActivity {
 
     String id, monthstr, username;
     int success;
-    int monthat, yearat, tujuan;
+    int monthat, yearat, tujuan, month;
     String tag_json_obj = "json_obj_req";
     private static final String TAG = StatistikActivity.class.getSimpleName();
     SharedPreferences sharedpreferences;
     TextView txt_bulan, txt_tahun;
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
-    private static String url_select_jumlah_surat_masuk 	 = "https://siapbali.000webhostapp.com/php_siapbali/select_jumlah_surat_masuk.php";
-    private static String url_select_jumlah_surat_keluar 	 = "https://siapbali.000webhostapp.com/php_siapbali/select_jumlah_surat_keluar.php";
-    private static String url_select_jumlah_disposisi_masuk 	 = "https://siapbali.000webhostapp.com/php_siapbali/select_jumlah_disposisi_masuk.php";
-    private static String url_select_jumlah_disposisi_keluar 	 = "https://siapbali.000webhostapp.com/php_siapbali/select_jumlah_disposisi_keluar.php";
+    private static String url_select_jumlah_surat_masuk 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_surat_masuk.php";
+    private static String url_select_jumlah_surat_keluar 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_surat_keluar.php";
+    private static String url_select_jumlah_disposisi_masuk 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_disposisi_masuk.php";
+    private static String url_select_jumlah_disposisi_keluar 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_disposisi_keluar.php";
 
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
@@ -61,8 +61,8 @@ public class StatistikActivity extends AppCompatActivity {
         tujuan = Integer.parseInt(id);
         GregorianCalendar gc = new GregorianCalendar();
         yearat = gc.get(Calendar.YEAR);
-        monthat = gc.get(Calendar.MONTH);
-//        monthstr = Integer.toString(monthat);
+        month = gc.get(Calendar.MONTH);
+        monthat =month+1;
 
         if (monthat == 1){
             monthstr ="Januari";

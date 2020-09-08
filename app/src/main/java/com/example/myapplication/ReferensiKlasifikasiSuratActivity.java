@@ -34,7 +34,7 @@ import java.util.ArrayList;
 
 public class ReferensiKlasifikasiSuratActivity extends AppCompatActivity {
 
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_klasifikasi_surat.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_klasifikasi_surat.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataKlasifikasiSurat> dataModelArrayList;
     private KlasifikasiSuratAdapter rvAdapter;

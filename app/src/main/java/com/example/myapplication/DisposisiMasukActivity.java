@@ -35,13 +35,13 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DisposisiMasukActivity extends AppCompatActivity {
 
     private static final String TAG = DisposisiMasukActivity.class.getSimpleName();
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_disposisi_masuk.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_disposisi_masuk.php";
     private static ProgressDialog mProgressDialog;
     List<DataDisposisi> DisposisiList = new ArrayList<>();
     private com.example.myapplication.adapter.DisposisiMasukAdapter DisposisiMasukAdapter;
     private RecyclerView recyclerView;
     Context mContext;
-    String id_level, username;
+    String id_level, username, id;
     String tag_json_obj = "json_obj_req";
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
@@ -57,6 +57,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
 
         mContext = this;
         sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+        id = sharedpreferences.getString(TAG_ID,"");
         username = sharedpreferences.getString(TAG_USERNAME,"");
         DisposisiMasukAdapter = new DisposisiMasukAdapter(mContext, DisposisiList);
         GridLayoutManager mLayoutManager = new GridLayoutManager(mContext, 1);
@@ -66,7 +67,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
 
 
 
-        select_disposisi(Integer.parseInt(id_level),username);
+        select_disposisi(Integer.parseInt(id));
     }
 
 //    public void det_disposisi_masuk(View view) {
@@ -74,7 +75,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
 //        startActivity(intent);
 //    }
 
-    private void select_disposisi(final int idx, final String asal){
+    private void select_disposisi(final int idx){
         StringRequest strReq = new StringRequest(Request.Method.POST, URLstring, new Response.Listener<String>() {
 
             @Override
@@ -103,7 +104,6 @@ public class DisposisiMasukActivity extends AppCompatActivity {
                             playerModel.setPerihal(dataobj.getString("perihal"));
                             playerModel.setIsi_disposisi(dataobj.getString("isi_disposisi"));
                             playerModel.setLampiran(dataobj.getString("lampiran"));
-                            playerModel.setFile_disposisi(dataobj.getString("file_disposisi"));
                             playerModel.setDerajat_surat(dataobj.getString("derajat_surat"));
                             playerModel.setNo_agenda(dataobj.getString("no_agenda"));
                             playerModel.setJenis_naskah_dinas(dataobj.getString("jenis_naskah_dinas"));
@@ -135,8 +135,7 @@ public class DisposisiMasukActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters ke post url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("id_level", String.valueOf(idx));
-                params.put("asal", String.valueOf(asal));
+                params.put("id_pegawai", String.valueOf(idx));
 
                 return params;
             }

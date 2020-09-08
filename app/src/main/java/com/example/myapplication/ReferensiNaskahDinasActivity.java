@@ -34,7 +34,7 @@ import java.util.ArrayList;
 
 public class ReferensiNaskahDinasActivity extends AppCompatActivity {
 
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_jenis_naskah_dinas.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_jenis_naskah_dinas.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataJenisNaskahDinas> dataModelArrayList;
     private JenisNaskahDinasAdapter rvAdapter;

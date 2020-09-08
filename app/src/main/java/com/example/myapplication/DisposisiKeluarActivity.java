@@ -33,7 +33,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DisposisiKeluarActivity extends AppCompatActivity {
 
     private static final String TAG = DisposisiKeluarActivity.class.getSimpleName();
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_disposisi_keluar.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_disposisi_keluar.php";
     private static ProgressDialog mProgressDialog;
     List<DataDisposisi> DisposisiList = new ArrayList<>();
     private com.example.myapplication.adapter.DisposisiKeluarAdapter DisposisiKeluarAdapter;
@@ -97,7 +97,6 @@ public class DisposisiKeluarActivity extends AppCompatActivity {
                             playerModel.setPerihal(dataobj.getString("perihal"));
                             playerModel.setIsi_disposisi(dataobj.getString("isi_disposisi"));
                             playerModel.setLampiran(dataobj.getString("lampiran"));
-                            playerModel.setFile_disposisi(dataobj.getString("file_disposisi"));
                             playerModel.setDerajat_surat(dataobj.getString("derajat_surat"));
                             playerModel.setNo_agenda(dataobj.getString("no_agenda"));
                             playerModel.setJenis_naskah_dinas(dataobj.getString("jenis_naskah_dinas"));

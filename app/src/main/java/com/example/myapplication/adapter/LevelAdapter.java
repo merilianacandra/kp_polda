@@ -57,7 +57,7 @@ public class LevelAdapter extends BaseAdapter {
             vi.setTag(viewHolder);
         }else {
             viewHolder = (ViewHolder) view.getTag();
-            viewHolder.level.setText(items.getLevel());
+            viewHolder.level.setText(items.getLevel()+"-"+items.getJabatan());
         }
 
         if(items.isCheckbox()){

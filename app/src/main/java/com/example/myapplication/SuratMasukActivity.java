@@ -35,7 +35,7 @@ import java.util.Map;
 public class SuratMasukActivity extends AppCompatActivity {
 
     private static final String TAG = SuratMasukActivity.class.getSimpleName();
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_surat.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_surat.php";
     private static ProgressDialog mProgressDialog;
     List<DataSurat> SuratList = new ArrayList<>();
     private SuratMasukAdapter SuratMasukAdapter;

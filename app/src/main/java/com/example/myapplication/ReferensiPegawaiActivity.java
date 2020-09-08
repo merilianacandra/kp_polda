@@ -32,7 +32,7 @@ import java.util.ArrayList;
 
 public class ReferensiPegawaiActivity extends AppCompatActivity {
 
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_pegawai.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_pegawai.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataPegawai> dataModelArrayList;
     private PegawaiAdapter rvAdapter;

@@ -34,7 +34,7 @@ import java.util.ArrayList;
 
 public class ReferensiKodeArsipActivity extends AppCompatActivity {
 
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_kode_arsip.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_kode_arsip.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataKodeArsip> dataModelArrayList;
     private KodeArsipAdapter rvAdapter;

@@ -34,7 +34,7 @@ import java.util.ArrayList;
 
 public class ReferensiDerajatSuratActivity extends AppCompatActivity {
 
-    private String URLstring = "https://siapbali.000webhostapp.com/php_siapbali/select_derajat_surat.php";
+    private String URLstring = "http://192.168.1.64/php_siap_bali/select_derajat_surat.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataDerajatSurat> dataModelArrayList;
     private DerajatSuratAdapter rvAdapter;
