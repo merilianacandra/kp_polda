@@ -81,10 +81,10 @@ public class FormDisposisiActivity extends AppCompatActivity {
     ArrayList<DataLevel> level = new ArrayList<DataLevel>();
 
     // Sesuaikan dengan IP Address PC/LAptop atau ip emulator bawaan android 10.0.2.2
-    private static String url = "http://192.168.1.64/php_siap_bali/checkbox_level.php";
-    private static String url_pegawai = "http://192.168.1.64/php_siap_bali/checkbox_pegawai.php";
-    private static String url_select_id_pegawai	 = "http://192.168.1.64/php_siap_bali/select_id_pegawai.php";
-    private static String url_insert 	 = Server.URL + "insert_transaksi_awal.php";
+    private static String url = Server.URL + "checkbox_level.php";
+    private static String url_pegawai = Server.URL + "checkbox_pegawai.php";
+    private static String url_select_id_pegawai	 = Server.URL + "select_id_pegawai.php";
+    private static String url_insert 	 = Server.URL + "insert_disposisi.php";
 
 
 
@@ -201,7 +201,7 @@ public class FormDisposisiActivity extends AppCompatActivity {
                             DataLevel item = new DataLevel();
 
                             item.setLevel(obj.getString("nama"));
-                            item.setJabatan(obj.getString("jabatan"));
+                            item.setJabatan(obj.getString("jabatan_pegawai"));
                             item.setId_pegawai(obj.getString("id_pegawai"));
 
                             // menambah item ke array
@@ -421,13 +421,6 @@ public class FormDisposisiActivity extends AppCompatActivity {
     }
 
     private void simpan_update() {
-//        String url;
-//        // jika id kosong maka simpan, jika id ada nilainya maka update
-//        if (id.isEmpty()){
-//            url = url_insert;
-//        } else {
-//            url = url_update;
-//        }
 
         StringRequest strReq = new StringRequest(Request.Method.POST, url_insert, new Response.Listener<String>() {
 
@@ -474,7 +467,7 @@ public class FormDisposisiActivity extends AppCompatActivity {
                 // jika id kosong maka simpan, jika id ada nilainya maka update
                 params.put("id_surat", String.valueOf(id_surat));
                 params.put("tujuan", String.valueOf(dipilihx));
-                params.put("asal", String.valueOf(username));
+                params.put("asal", String.valueOf(id));
                 params.put("no_agenda", String.valueOf(pno_agenda));
                 params.put("isi_disposisi", String.valueOf(isi));
 

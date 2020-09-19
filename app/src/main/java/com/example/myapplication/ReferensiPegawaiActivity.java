@@ -23,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.myapplication.adapter.PegawaiAdapter;
 import com.example.myapplication.data.DataPegawai;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,7 +33,7 @@ import java.util.ArrayList;
 
 public class ReferensiPegawaiActivity extends AppCompatActivity {
 
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_pegawai.php";
+    private String URLstring = Server.URL + "select_pegawai.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataPegawai> dataModelArrayList;
     private PegawaiAdapter rvAdapter;
@@ -77,7 +78,7 @@ public class ReferensiPegawaiActivity extends AppCompatActivity {
                                     playerModel.setNama(dataobj.getString("nama"));
                                     playerModel.setNrp(dataobj.getString("nrp"));
                                     playerModel.setPangkat(dataobj.getString("pangkat"));
-                                    playerModel.setJabatan(dataobj.getString("jabatan"));
+                                    playerModel.setJabatan(dataobj.getString("jabatan_pegawai"));
 //                                    playerModel.setImage(dataobj.getString("foto_bengkel"));
 
                                     dataModelArrayList.add(playerModel);

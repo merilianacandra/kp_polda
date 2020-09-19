@@ -39,9 +39,17 @@ public class DisposisiMasukAdapter extends RecyclerView.Adapter<DisposisiMasukAd
     public void onBindViewHolder(MyViewHolder holder, int position) {
         final DataDisposisi model=my_list.get(position);
         holder.mderajat.setText(model.getDerajat_surat());
-        holder.masal.setText(model.getAsal());
+        holder.masal.setText(model.getNama_asal());
         holder.mtanggal.setText(model.getTgl_disposisi());
         holder.mperihal.setText(model.getPerihal());
+        int status = Integer.parseInt(model.getStatus_disposisi());
+        String status_baca = null;
+        if(status == 1) {
+            status_baca="Belum dibaca";
+        }if(status == 2){
+            status_baca="Sudah dibaca";
+        }
+        holder.mstatus.setText(status_baca);
         holder.mCardViewDisposisi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +58,7 @@ public class DisposisiMasukAdapter extends RecyclerView.Adapter<DisposisiMasukAd
                 intent.putExtra("id_surat", model.getId_surat());
                 intent.putExtra("no_surat", model.getNo_surat());
                 intent.putExtra("no_agenda",model.getNo_agenda());
-                intent.putExtra("asal",model.getAsal());
+                intent.putExtra("asal",model.getNama_asal());
                 intent.putExtra("tujuan",model.getNama());
                 intent.putExtra("perihal",model.getPerihal());
                 intent.putExtra("isi",model.getIsi_disposisi());
@@ -60,6 +68,10 @@ public class DisposisiMasukAdapter extends RecyclerView.Adapter<DisposisiMasukAd
                 intent.putExtra("jenis_naskah_dinas",model.getJenis_naskah_dinas());
                 intent.putExtra("lampiran",model.getLampiran());
                 intent.putExtra("tanggal",model.getTgl_disposisi());
+                intent.putExtra("nama_asal",model.getNama_asal());
+                intent.putExtra("status_baca",model.getStatus_disposisi());
+                intent.putExtra("status_buat",model.getStatus_buat());
+                intent.putExtra("id_tujuan",model.getTujuan());
                 context.startActivity(intent);
             }
         });
@@ -73,7 +85,7 @@ public class DisposisiMasukAdapter extends RecyclerView.Adapter<DisposisiMasukAd
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mderajat, masal, mtanggal, mperihal;
+        public TextView mderajat, masal, mtanggal, mperihal, mstatus;
         public CardView mCardViewDisposisi;
 
         public MyViewHolder(View itemView) {
@@ -84,6 +96,7 @@ public class DisposisiMasukAdapter extends RecyclerView.Adapter<DisposisiMasukAd
             mtanggal=itemView.findViewById(R.id.tanggal);
             mperihal=itemView.findViewById(R.id.perihal);
             mCardViewDisposisi=itemView.findViewById(R.id.cvDisposisi);
+            mstatus= itemView.findViewById(R.id.ket_baca);
         }
     }
 

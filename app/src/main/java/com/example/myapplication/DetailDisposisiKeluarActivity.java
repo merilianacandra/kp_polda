@@ -41,7 +41,7 @@ public class DetailDisposisiKeluarActivity extends AppCompatActivity {
         id_surat= getIntent().getStringExtra("id_surat");
         pno_surat=getIntent().getStringExtra("no_surat");
         pno_agenda=getIntent().getStringExtra("no_agenda");
-        pasal=getIntent().getStringExtra("asal");
+        pasal=getIntent().getStringExtra("nama_asal");
         pisi_disposisi=getIntent().getStringExtra("isi");
         pperihal = getIntent().getStringExtra("perihal");
         pderajat_surat = getIntent().getStringExtra("derajat_surat");

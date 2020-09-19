@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -167,7 +163,6 @@
                 android:textSize="16sp"
                 android:paddingLeft="10dp" />
 
-
             <ListView
                 android:id="@+id/list_level"
                 android:layout_width="match_parent"
@@ -175,18 +170,17 @@
                 tools:listitem = "@layout/list_row"
                 android:dividerHeight="1dp"/>
 
-            <Button
-                android:id="@+id/pilih_level"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="100dp"
-                android:onClick="pilih_level"
-                android:background="@color/colorWhite"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="24sp"
-                android:layout_marginBottom="24sp"
-                android:text="Pilih Level" />
-
+<!--            <Button-->
+<!--                android:id="@+id/pilih_level"-->
+<!--                android:layout_width="150dp"-->
+<!--                android:layout_height="50dp"-->
+<!--                android:layout_marginLeft="100dp"-->
+<!--                android:onClick="pilih_level"-->
+<!--                android:background="@color/colorWhite"-->
+<!--                android:layout_marginRight="10dp"-->
+<!--                android:layout_marginTop="24sp"-->
+<!--                android:layout_marginBottom="24sp"-->
+<!--                android:text="Pilih Level" />-->
 
         </LinearLayout>
         <LinearLayout
@@ -230,4 +224,3 @@
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>

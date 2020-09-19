@@ -1,261 +1,254 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    android:background="@drawable/shape"
+    tools:context=".FormDisposisi2Activity">
+
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@drawable/shape"
-        tools:context=".FormDisposisiActivity">
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="30dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/perihal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Disposisi Sebelumnya"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
+
+        <TextView
+            android:id="@+id/isi_disposisi_sebelum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tolong urus segera dan dengan seksama "
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorBlack"
+            android:textSize="18sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="30dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:visibility="visible"
+                android:layout_height="2dp"
+                android:background="@color/colorAbu"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
+            <TextView
+                android:layout_width="340dp"
+                android:layout_height="wrap_content"
+                android:text="Lembar Disposisi"
+                android:textColor="@color/colorBlack"
+                android:textSize="20sp"
+                android:paddingBottom="10dp"
+                android:textStyle="bold"
+                />
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/shape"
-            android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_marginBottom="30dp"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints">
-            <TextView
-                android:id="@+id/perihal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Disposisi Sebelumnya"
-                android:textColor="@color/colorBlack"
-                android:textStyle="bold"
-                android:textSize="22sp"/>
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/shape1"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/isi_disposisi_sebelum"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Segera Laksanakan"
-                android:layout_marginTop="20dp"
+                android:paddingLeft="10dp"
+                android:text="Nomor Surat : "
                 android:textColor="@color/colorBlack"
-                android:textSize="18sp"/>
+                android:textSize="16sp" />
 
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="15dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/colorAbu"
-                    android:visibility="visible" />
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/form_nomorsurat"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp">
-                <TextView
-                    android:layout_width="340dp"
-                    android:layout_height="wrap_content"
-                    android:text="Lembar Disposisi"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="20sp"
-                    android:paddingBottom="10dp"
-                    android:textStyle="bold"
-                    />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/shape1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nomor Surat : "
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingLeft="10dp" />
-
-                <TextView
-                    android:id="@+id/form_nomorsurat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingRight="20dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/shape1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Nomor Agenda : "
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingLeft="10dp" />
-
-                <TextView
-                    android:id="@+id/form_nomoragenda"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingRight="20dp" />
-            </LinearLayout>
-
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/shape1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingLeft="10dp"
-                    android:text="Kategori : "
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16dp" />
-
-                <TextView
-                    android:id="@+id/form_kategori"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingRight="20dp" />
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:background="@drawable/shape1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Perihal : "
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingLeft="10dp" />
-
-                <TextView
-                    android:id="@+id/form_perihal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingRight="20dp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/shape1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:text="Kepada : "
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingLeft="10dp" />
-
-
-                <ListView
-                    android:id="@+id/list_level"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    tools:listitem = "@layout/list_row"
-                    android:dividerHeight="1dp"/>
-
-                <Button
-                    android:id="@+id/pilih_level"
-                    android:layout_width="150dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="100dp"
-                    android:onClick="pilih_level"
-                    android:background="@color/colorWhite"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginTop="24sp"
-                    android:layout_marginBottom="24sp"
-                    android:text="Pilih Level" />
-
-
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="@drawable/shape1"
-                android:layout_marginLeft="10dp"
-                android:layout_marginBottom="5dp"
-                android:layout_marginRight="10dp">
-
-                <TextView
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:text="Isi Disposisi : "
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingLeft="10dp" />
-
-                <EditText
-                    android:id="@+id/isi_disposisi"
-                    android:layout_width="match_parent"
-                    android:layout_height="100dp"
-                    android:background="@color/colorWhite"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp"
-                    android:paddingRight="20dp" />
-            </LinearLayout>
-
-            <Button
-                android:id="@+id/simpan_disposisi"
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_marginLeft="100dp"
-                android:onClick="simpan_disposisi"
-                android:background="@drawable/button_rounded_white"
-                android:layout_marginRight="10dp"
-                android:layout_marginTop="24sp"
-                android:layout_marginBottom="24sp"
-                android:text="Kirim Disposisi" />
+                android:paddingRight="20dp"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
         </LinearLayout>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Agenda : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/form_nomoragenda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="Kategori : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16dp" />
+
+            <TextView
+                android:id="@+id/form_kategori"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perihal : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+            <TextView
+                android:id="@+id/form_perihal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Kepada : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+            <ListView
+                android:id="@+id/list_level"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                tools:listitem = "@layout/list_row"
+                android:dividerHeight="1dp"/>
+
+            <!--            <Button-->
+            <!--                android:id="@+id/pilih_level"-->
+            <!--                android:layout_width="150dp"-->
+            <!--                android:layout_height="50dp"-->
+            <!--                android:layout_marginLeft="100dp"-->
+            <!--                android:onClick="pilih_level"-->
+            <!--                android:background="@color/colorWhite"-->
+            <!--                android:layout_marginRight="10dp"-->
+            <!--                android:layout_marginTop="24sp"-->
+            <!--                android:layout_marginBottom="24sp"-->
+            <!--                android:text="Pilih Level" />-->
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/shape1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="10dp">
+
+            <TextView
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:text="Isi Disposisi : "
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingLeft="10dp" />
+
+            <EditText
+                android:id="@+id/isi_disposisi"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@color/colorWhite"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp"
+                android:paddingRight="20dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/simpan_disposisi"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="100dp"
+            android:onClick="simpan_disposisi"
+            android:background="@drawable/button_rounded_white"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="24sp"
+            android:layout_marginBottom="24sp"
+            android:text="Kirim Disposisi" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

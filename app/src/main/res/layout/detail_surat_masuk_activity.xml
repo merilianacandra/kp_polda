@@ -16,10 +16,37 @@
         android:layout_marginRight="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/asal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Besse Uswetun Heseneh Operator"
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/keterangan_instansi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/colorBlack"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+
         <TextView
             android:id="@+id/derajat_surat"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:text="Pribadi"
             android:textStyle="bold"
             android:textColor="@color/colorBlack"
@@ -164,24 +191,15 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/ket_baca"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:text="Sudah dibaca"
-            android:textStyle="bold"
-            android:textColor="@color/colorBlue"
-            android:textSize="18sp"/>
-
-        <TextView
             android:id="@+id/ket_disposisi"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Belum didisposisi"
+            android:layout_marginTop="15dp"
+            android:text="Sudah didisposisi"
             android:textStyle="bold"
             android:textColor="@color/colorBackgroud"
             android:textSize="18sp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -225,47 +243,29 @@
                 android:background="@color/colorAbu"/>
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal">
+            android:text="Disposisi Surat"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorBlack"
+            android:textStyle="bold"
+            android:textSize="22sp"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="Dari"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/asal"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Besse Uswetun Heseneh Operator"
-                    android:textColor="@color/colorBlack"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView1"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </androidx.recyclerview.widget.RecyclerView>
 
         <Button
             android:id="@+id/btn_disposisi"
             android:textColor="#fff"
             android:onClick="buat_disposisi"
             android:background="@drawable/buttonstyle"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:layout_gravity="center_horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

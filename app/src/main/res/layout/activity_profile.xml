@@ -35,8 +35,9 @@
                     android:layout_height="wrap_content"
                     android:text="Nama Anda"
                     android:textColor="#fff"
+                    android:gravity="center"
                     android:textStyle="bold"
-                    android:textSize="30sp"/>
+                    android:textSize="20sp"/>
             </LinearLayout>
             <androidx.cardview.widget.CardView
                 app:cardCornerRadius="10dp"
@@ -56,7 +57,7 @@
                         android:layout_gravity="center"
                         android:gravity="center"
                         android:text="My Profile"
-                        android:textColor="@color/colorBackgroud"
+                        android:textColor="@color/colorMerahTua"
                         android:textSize="40sp"
                         android:textStyle="bold"
                         />
@@ -85,7 +86,7 @@
                     android:paddingLeft="20dp"
                     android:text="NRP :"
                     android:textSize="20sp"
-                    android:textColor="@color/colorBackgroud"
+                    android:textColor="@color/colorMerahTua"
                     android:textStyle="bold" />
                 <TextView
                     android:id="@+id/nrp"
@@ -112,7 +113,7 @@
                     android:paddingLeft="20dp"
                     android:text="No Hp :"
                     android:textSize="20sp"
-                    android:textColor="@color/colorBackgroud"
+                    android:textColor="@color/colorMerahTua"
                     android:textStyle="bold" />
 
                 <TextView
@@ -140,7 +141,7 @@
                     android:paddingLeft="20dp"
                     android:text="Alamat :"
                     android:textSize="20sp"
-                    android:textColor="@color/colorBackgroud"
+                    android:textColor="@color/colorMerahTua"
                     android:textStyle="bold" />
 
                 <TextView
@@ -167,7 +168,7 @@
                     android:layout_height="wrap_content"
                     android:paddingLeft="20dp"
                     android:textSize="20sp"
-                    android:textColor="@color/colorBackgroud"
+                    android:textColor="@color/colorMerahTua"
                     android:text="Tanggal Lahir :"/>
 
                 <TextView
@@ -195,7 +196,7 @@
                     android:paddingLeft="20dp"
                     android:text="Pangkat :"
                     android:textSize="20sp"
-                    android:textColor="@color/colorBackgroud"
+                    android:textColor="@color/colorMerahTua"
                     android:textStyle="bold" />
 
                 <TextView
@@ -222,7 +223,7 @@
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="20dp"
                     android:text="Jabatan :"
-                    android:textColor="@color/colorBackgroud"
+                    android:textColor="@color/colorMerahTua"
                     android:textSize="20sp"
                     android:textStyle="bold" />
 

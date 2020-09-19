@@ -5,12 +5,12 @@ import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.myapplication.DetailDisposisiMasukActivity;
 import com.example.myapplication.DetailSuratMasukActivityActivity;
 import com.example.myapplication.R;
+import com.example.myapplication.data.DataDisposisi;
 import com.example.myapplication.data.DataSurat;
 
 import java.util.List;
@@ -18,57 +18,68 @@ import java.util.List;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class SuratMasukAdapter extends RecyclerView.Adapter<SuratMasukAdapter.MyViewHolder> {
+public class DisposisiSuratAdapter extends RecyclerView.Adapter<DisposisiSuratAdapter.MyViewHolder> {
 
-    List<DataSurat> my_list;
-    List<DataSurat> my_listfull;
+    List<DataDisposisi> my_list;
+    List<DataDisposisi> my_listfull;
     Context context;
 
-    public SuratMasukAdapter(Context context, List<DataSurat> my_list) {
+    public DisposisiSuratAdapter(Context context, List<DataDisposisi> my_list) {
         this.my_list = my_list;
         this.context = context;
     }
 
     @Override
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_surat,parent,false);
+        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.list_disposisi_surat,parent,false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder holder, int position) {
-        final DataSurat model=my_list.get(position);
-        holder.mno_surat.setText(model.getNo_surat());
-        holder.masal.setText(model.getNama_satker());
-        holder.mtanggal.setText(model.getTgl_surat());
+        final DataDisposisi model=my_list.get(position);
+        holder.mderajat.setText(model.getDerajat_surat());
+        holder.masal.setText("Dari : "+model.getNama_asal());
+        holder.mkepada.setText("Kepada : "+model.getNama());
+        holder.mtanggal.setText(model.getTgl_disposisi());
         holder.mperihal.setText(model.getPerihal());
-        int status = Integer.parseInt(model.getStatus());
-        String status_baca = null;
-        if(status == 1) {
-            status_baca="Belum dibaca";
-        }if(status == 2){
-            status_baca="Sudah dibaca";
+        int status_baca = Integer.parseInt(model.getStatus_disposisi());
+        String status_baca1= null;
+        if (status_baca == 1){
+            status_baca1 = "Belum Dibaca";
+        } if (status_baca == 2) {
+            status_baca1 = "Sudah Dibaca";
         }
-        holder.mstatus.setText(status_baca);
-        holder.mCardViewSurat.setOnClickListener(new View.OnClickListener() {
+        holder.mbaca.setText(status_baca1);
+        int status_buat = Integer.parseInt(model.getStatus_buat());
+        String status_buat1= null;
+        if (status_buat == 1){
+            status_buat1 = "Belum Didisposisi";
+        } if (status_buat == 2) {
+            status_buat1 = "Sudah Didisposisi";
+        }
+        holder.mdisposisi.setText(status_buat1);
+        holder.mCardViewDisposisi.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(context, DetailSuratMasukActivityActivity.class);
+                Intent intent=new Intent(context, DetailDisposisiMasukActivity.class);
+                intent.putExtra("id_disposisi", model.getId_disposisi());
                 intent.putExtra("id_surat", model.getId_surat());
                 intent.putExtra("no_surat", model.getNo_surat());
                 intent.putExtra("no_agenda",model.getNo_agenda());
-                intent.putExtra("asal",model.getAsal());
+                intent.putExtra("asal",model.getNama_asal());
+                intent.putExtra("tujuan",model.getNama());
                 intent.putExtra("perihal",model.getPerihal());
-                intent.putExtra("isi",model.getIsi_ringkas());
-                intent.putExtra("file",model.getFile_surat());
+                intent.putExtra("isi",model.getIsi_disposisi());
+                intent.putExtra("file",model.getFile_disposisi());
                 intent.putExtra("derajat_surat",model.getDerajat_surat());
                 intent.putExtra("tersier",model.getTersier());
                 intent.putExtra("jenis_naskah_dinas",model.getJenis_naskah_dinas());
                 intent.putExtra("lampiran",model.getLampiran());
-                intent.putExtra("tanggal",model.getTgl_surat());
-                intent.putExtra("nama_satker",model.getNama_satker());
-                intent.putExtra("keterangan_instansi",model.getKeterangan_instansi());
-                intent.putExtra("status",model.getStatus());
+                intent.putExtra("tanggal",model.getTgl_disposisi());
+                intent.putExtra("nama_asal",model.getNama_asal());
+                intent.putExtra("status_baca",model.getStatus_disposisi());
+                intent.putExtra("status_buat",model.getStatus_buat());
                 intent.putExtra("id_tujuan",model.getTujuan());
                 context.startActivity(intent);
             }
@@ -83,18 +94,20 @@ public class SuratMasukAdapter extends RecyclerView.Adapter<SuratMasukAdapter.My
 
     class MyViewHolder extends RecyclerView.ViewHolder {
 
-        public TextView mno_surat, masal, mtanggal, mperihal, mstatus;
-        public CardView mCardViewSurat;
+        public TextView mderajat, masal, mtanggal, mperihal, mkepada, mbaca, mdisposisi;
+        public CardView mCardViewDisposisi;
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            mno_surat= itemView.findViewById(R.id.no_surat);
+            mderajat = itemView.findViewById(R.id.derajat);
             masal= itemView.findViewById(R.id.asal);
             mtanggal=itemView.findViewById(R.id.tanggal);
             mperihal=itemView.findViewById(R.id.perihal);
-            mCardViewSurat=itemView.findViewById(R.id.cvSurat);
-            mstatus=itemView.findViewById(R.id.ket_baca);
+            mkepada=itemView.findViewById(R.id.kepada);
+            mbaca=itemView.findViewById(R.id.ket_baca);
+            mdisposisi=itemView.findViewById(R.id.ket_disposisi);
+            mCardViewDisposisi=itemView.findViewById(R.id.cvDisposisi);
         }
     }
 

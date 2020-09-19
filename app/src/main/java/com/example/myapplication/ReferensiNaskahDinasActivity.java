@@ -25,6 +25,7 @@ import com.example.myapplication.adapter.JenisNaskahDinasAdapter;
 import com.example.myapplication.adapter.PegawaiAdapter;
 import com.example.myapplication.data.DataJenisNaskahDinas;
 import com.example.myapplication.data.DataPegawai;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +35,7 @@ import java.util.ArrayList;
 
 public class ReferensiNaskahDinasActivity extends AppCompatActivity {
 
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_jenis_naskah_dinas.php";
+    private String URLstring = Server.URL + "select_jenis_naskah_dinas.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataJenisNaskahDinas> dataModelArrayList;
     private JenisNaskahDinasAdapter rvAdapter;

@@ -18,6 +18,7 @@ import com.example.myapplication.adapter.SuratMasukAdapter;
 import com.example.myapplication.app.AppController;
 import com.example.myapplication.data.DataDisposisi;
 import com.example.myapplication.data.DataSurat;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,7 +36,7 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DisposisiMasukActivity extends AppCompatActivity {
 
     private static final String TAG = DisposisiMasukActivity.class.getSimpleName();
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_disposisi_masuk.php";
+    private String URLstring = Server.URL + "select_disposisi_masuk.php";
     private static ProgressDialog mProgressDialog;
     List<DataDisposisi> DisposisiList = new ArrayList<>();
     private com.example.myapplication.adapter.DisposisiMasukAdapter DisposisiMasukAdapter;
@@ -109,6 +110,10 @@ public class DisposisiMasukActivity extends AppCompatActivity {
                             playerModel.setJenis_naskah_dinas(dataobj.getString("jenis_naskah_dinas"));
                             playerModel.setTersier(dataobj.getString("tersier"));
                             playerModel.setNama(dataobj.getString("nama"));
+                            playerModel.setNama_asal(dataobj.getString("nama_asal"));
+                            playerModel.setStatus_disposisi(dataobj.getString("status_disposisi"));
+                            playerModel.setStatus_buat(dataobj.getString("status_buat"));
+                            playerModel.setTujuan(dataobj.getString("tujuan"));
 
                             DisposisiList.add(playerModel);
 

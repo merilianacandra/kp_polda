@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +17,7 @@ import com.example.myapplication.adapter.DisposisiKeluarAdapter;
 import com.example.myapplication.adapter.DisposisiMasukAdapter;
 import com.example.myapplication.app.AppController;
 import com.example.myapplication.data.DataDisposisi;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -33,14 +35,17 @@ import androidx.recyclerview.widget.RecyclerView;
 public class DisposisiKeluarActivity extends AppCompatActivity {
 
     private static final String TAG = DisposisiKeluarActivity.class.getSimpleName();
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_disposisi_keluar.php";
+    private String URLstring = Server.URL + "select_disposisi_keluar.php";
     private static ProgressDialog mProgressDialog;
     List<DataDisposisi> DisposisiList = new ArrayList<>();
     private com.example.myapplication.adapter.DisposisiKeluarAdapter DisposisiKeluarAdapter;
     private RecyclerView recyclerView;
     Context mContext;
-    String asal;
+    String asal, id, username;
     String tag_json_obj = "json_obj_req";
+    public static final String TAG_ID = "id";
+    public static final String TAG_USERNAME = "username";
+    SharedPreferences sharedpreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +53,9 @@ public class DisposisiKeluarActivity extends AppCompatActivity {
         setContentView(R.layout.activity_disposisi_keluar);
 
         recyclerView = findViewById(R.id.recyclerView1);
-
+        sharedpreferences = getSharedPreferences(LoginActivity.my_shared_preferences, Context.MODE_PRIVATE);
+        id = sharedpreferences.getString(TAG_ID,"");
+        username = sharedpreferences.getString(TAG_USERNAME,"");
         mContext = this;
 
         DisposisiKeluarAdapter = new DisposisiKeluarAdapter(mContext, DisposisiList);
@@ -59,7 +66,7 @@ public class DisposisiKeluarActivity extends AppCompatActivity {
 
 
 
-        select_disposisi(asal);
+        select_disposisi(id);
 
     }
 
@@ -102,6 +109,8 @@ public class DisposisiKeluarActivity extends AppCompatActivity {
                             playerModel.setJenis_naskah_dinas(dataobj.getString("jenis_naskah_dinas"));
                             playerModel.setTersier(dataobj.getString("tersier"));
                             playerModel.setNama(dataobj.getString("nama"));
+                            playerModel.setNama_asal(dataobj.getString("nama_asal"));
+                            playerModel.setTujuan(dataobj.getString("tujuan"));
 
                             DisposisiList.add(playerModel);
 

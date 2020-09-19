@@ -13,6 +13,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -22,6 +23,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.myapplication.adapter.SuratMasukAdapter;
 import com.example.myapplication.app.AppController;
 import com.example.myapplication.data.DataSurat;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -35,7 +37,7 @@ import java.util.Map;
 public class SuratMasukActivity extends AppCompatActivity {
 
     private static final String TAG = SuratMasukActivity.class.getSimpleName();
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_surat.php";
+    private String URLstring = Server.URL + "select_surat.php";
     private static ProgressDialog mProgressDialog;
     List<DataSurat> SuratList = new ArrayList<>();
     private SuratMasukAdapter SuratMasukAdapter;
@@ -43,6 +45,7 @@ public class SuratMasukActivity extends AppCompatActivity {
     Context mContext;
     String id_pegawai;
     String tag_json_obj = "json_obj_req";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +108,10 @@ public class SuratMasukActivity extends AppCompatActivity {
                             playerModel.setNo_agenda(dataobj.getString("no_agenda"));
                             playerModel.setJenis_naskah_dinas(dataobj.getString("jenis_naskah_dinas"));
                             playerModel.setTersier(dataobj.getString("tersier"));
+                            playerModel.setNama_satker(dataobj.getString("nama_satker"));
+                            playerModel.setKeterangan_instansi(dataobj.getString("keterangan_instansi"));
+                            playerModel.setStatus(dataobj.getString("status"));
+                            playerModel.setTujuan(dataobj.getString("tujuan"));
 
                             SuratList.add(playerModel);
 

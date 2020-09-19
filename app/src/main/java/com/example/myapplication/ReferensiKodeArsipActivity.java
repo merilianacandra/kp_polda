@@ -25,6 +25,7 @@ import com.example.myapplication.adapter.KlasifikasiSuratAdapter;
 import com.example.myapplication.adapter.KodeArsipAdapter;
 import com.example.myapplication.data.DataKlasifikasiSurat;
 import com.example.myapplication.data.DataKodeArsip;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -34,7 +35,7 @@ import java.util.ArrayList;
 
 public class ReferensiKodeArsipActivity extends AppCompatActivity {
 
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_kode_arsip.php";
+    private String URLstring = Server.URL + "select_kode_arsip.php";
     private static ProgressDialog mProgressDialog;
     ArrayList<DataKodeArsip> dataModelArrayList;
     private KodeArsipAdapter rvAdapter;

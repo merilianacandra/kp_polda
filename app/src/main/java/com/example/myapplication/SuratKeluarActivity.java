@@ -27,6 +27,7 @@ import com.android.volley.toolbox.StringRequest;
 import com.example.myapplication.adapter.SuratKeluarAdapter;
 import com.example.myapplication.app.AppController;
 import com.example.myapplication.data.DataSurat;
+import com.example.myapplication.util.Server;
 
 import org.apache.http.conn.ConnectTimeoutException;
 import org.json.JSONArray;
@@ -46,7 +47,7 @@ import java.util.Map;
 public class SuratKeluarActivity extends AppCompatActivity {
 
     private static final String TAG = SuratKeluarActivity.class.getSimpleName();
-    private String URLstring = "http://192.168.1.64/php_siap_bali/select_surat_keluar.php";
+    private String URLstring = Server.URL + "select_surat_keluar.php";
     private static ProgressDialog mProgressDialog;
     List<DataSurat> SuratList = new ArrayList<>();
     private com.example.myapplication.adapter.SuratKeluarAdapter SuratKeluarAdapter;
@@ -112,6 +113,8 @@ public class SuratKeluarActivity extends AppCompatActivity {
                             playerModel.setNo_agenda(dataobj.getString("no_agenda"));
                             playerModel.setJenis_naskah_dinas(dataobj.getString("jenis_naskah_dinas"));
                             playerModel.setTersier(dataobj.getString("tersier"));
+                            playerModel.setNama_satker(dataobj.getString("nama_satker"));
+                            playerModel.setKeterangan_instansi(dataobj.getString("keterangan_instansi"));
 
                             SuratList.add(playerModel);
 

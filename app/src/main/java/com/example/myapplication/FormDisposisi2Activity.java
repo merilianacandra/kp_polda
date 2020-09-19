@@ -54,11 +54,12 @@ public class FormDisposisi2Activity extends AppCompatActivity {
 
     TextView tno_surat, tperihal, tderajat_surat, tno_agenda, tisi_disposisi;
     EditText isi_disposisi;
-    String id_surat, pno_surat, pperihal, pderajat_surat, pno_agenda, pisi_disposisi;
-    String id, id_pegawai, username, isi,id_pegawaix;
+    String id_surat, pno_surat, pperihal, pderajat_surat, pno_agenda, pisi_disposisi, id_disposisi;
+    String id, id_pegawai, username, isi,id_pegawaix, id_sub_bagian;
     SharedPreferences sharedpreferences;
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
+    public static final String TAG_SUB_BAGIAN = "id_sub_bagian";
     int success;
     ListView list;
     TextView txt_menu;
@@ -75,10 +76,11 @@ public class FormDisposisi2Activity extends AppCompatActivity {
     ArrayList<DataLevel> level = new ArrayList<DataLevel>();
 
     // Sesuaikan dengan IP Address PC/LAptop atau ip emulator bawaan android 10.0.2.2
-    private static String url = "http://192.168.1.64/php_siap_bali/checkbox_level.php";
-    private static String url_pegawai = "http://192.168.1.64/php_siap_bali/checkbox_pegawai.php";
-    private static String url_select_id_pegawai	 = "http://192.168.1.64/php_siap_bali/select_id_pegawai.php";
-    private static String url_insert 	 = Server.URL + "insert_transaksi_awal.php";
+    private static String url = Server.URL + "checkbox_pegawai.php";
+    private static String url_pegawai = Server.URL + "checkbox_pegawai.php";
+    private static String url_select_id_pegawai	 = Server.URL + "select_id_pegawai.php";
+    private static String url_insert 	 = Server.URL + "insert_disposisi.php";
+    private static String url_update_buat_disposisi 	 = Server.URL + "update_buat_disposisi.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +91,7 @@ public class FormDisposisi2Activity extends AppCompatActivity {
 
         id = sharedpreferences.getString(TAG_ID, "");
         username = sharedpreferences.getString(TAG_USERNAME,"");
+        id_sub_bagian = sharedpreferences.getString(TAG_SUB_BAGIAN,"");
 
         tno_surat = (TextView) findViewById(R.id.form_nomorsurat);
         tno_agenda = (TextView) findViewById(R.id.form_nomoragenda);
@@ -96,6 +99,7 @@ public class FormDisposisi2Activity extends AppCompatActivity {
         tderajat_surat = (TextView) findViewById(R.id.form_kategori);
         tisi_disposisi = (TextView) findViewById(R.id.isi_disposisi_sebelum);
 
+        id_disposisi = getIntent().getStringExtra("id_disposisi");
         id_surat = getIntent().getStringExtra("id_surat");
         pno_surat = getIntent().getStringExtra("no_surat");
         pno_agenda = getIntent().getStringExtra("no_agenda");
@@ -153,7 +157,7 @@ public class FormDisposisi2Activity extends AppCompatActivity {
                         DataLevel item = new DataLevel();
 
                         item.setLevel(obj.getString("nama"));
-                        item.setJabatan(obj.getString("jabatan"));
+                        item.setJabatan(obj.getString("jabatan_pegawai"));
                         item.setId_pegawai(obj.getString("id_pegawai"));
 
                         // menambah item ke array
@@ -221,7 +225,21 @@ public class FormDisposisi2Activity extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             }
-        });
+        })
+//        {
+//
+//            @Override
+//            protected Map<String, String> getParams() {
+//                // Posting parameters to login url
+//                Map<String, String> params = new HashMap<String, String>();
+//                params.put("id_sub_bagian", id_sub_bagian);
+//
+//
+//                return params;
+//            }
+//
+//        }
+        ;
 
         // menambah request ke request queue
         AppController.getInstance().addToRequestQueue(jArr);
@@ -263,6 +281,7 @@ public class FormDisposisi2Activity extends AppCompatActivity {
 //        id_pegawaix = id_pegawai;
         isi = String.valueOf(isi_disposisi.getText());
         simpan_update();
+        update_buat_disposisi();
         Intent intent = new Intent(FormDisposisi2Activity.this, MainActivity.class);
         finish();
         startActivity(intent);
@@ -364,9 +383,72 @@ public class FormDisposisi2Activity extends AppCompatActivity {
                 // jika id kosong maka simpan, jika id ada nilainya maka update
                 params.put("id_surat", String.valueOf(id_surat));
                 params.put("tujuan", String.valueOf(dipilihx));
-                params.put("asal", String.valueOf(username));
+                params.put("asal", String.valueOf(id));
                 params.put("no_agenda", String.valueOf(pno_agenda));
                 params.put("isi_disposisi", String.valueOf(isi));
+
+
+                return params;
+            }
+
+        };
+
+        AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
+    }
+
+    private void update_buat_disposisi() {
+//        String url;
+//        // jika id kosong maka simpan, jika id ada nilainya maka update
+//        if (id.isEmpty()){
+//            url = url_insert;
+//        } else {
+//            url = url_update;
+//        }
+
+        StringRequest strReq = new StringRequest(Request.Method.POST, url_update_buat_disposisi, new Response.Listener<String>() {
+
+            @Override
+            public void onResponse(String response) {
+                Log.d(TAG, "Response: " + response.toString());
+
+                try {
+                    JSONObject jObj = new JSONObject(response);
+                    success = jObj.getInt(TAG_SUCCESS);
+
+                    // Cek error node pada json
+                    if (success == 1) {
+                        Log.d("update status_buat", jObj.toString());
+
+////                        callVolley();
+////                        kosong();
+////
+                        Toast.makeText(FormDisposisi2Activity.this, jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
+////                        adapter.notifyDataSetChanged();
+
+                    } else {
+                        Toast.makeText(FormDisposisi2Activity.this, jObj.getString(TAG_MESSAGE), Toast.LENGTH_LONG).show();
+                    }
+                } catch (JSONException e) {
+                    // JSON error
+                    e.printStackTrace();
+                }
+
+            }
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, "Error: " + error.getMessage());
+                Toast.makeText(FormDisposisi2Activity.this, error.getMessage(), Toast.LENGTH_LONG).show();
+            }
+        }) {
+
+            @Override
+            protected Map<String, String> getParams() {
+                // Posting parameters ke post url
+                Map<String, String> params = new HashMap<String, String>();
+                // jika id kosong maka simpan, jika id ada nilainya maka update
+                params.put("id_disposisi", String.valueOf(id_disposisi));
 
 
                 return params;

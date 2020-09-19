@@ -1,12 +1,12 @@
 package com.example.myapplication.data;
 
 public class DataSurat {
-    private String id_surat, no_surat, asal, klasifikasi_surat, tersier, derajat_surat, jenis_naskah_dinas, tgl_surat, tujuan, perihal, lampiran, isi_ringkas, file_surat, no_agenda, nama, id_level;
+    private String id_surat, no_surat, asal, klasifikasi_surat, tersier, derajat_surat, jenis_naskah_dinas, tgl_surat, tujuan, perihal, lampiran, isi_ringkas, file_surat, no_agenda, nama, id_level, nama_satker, keterangan_instansi, status;
 
     public DataSurat() {
     }
 
-    public DataSurat(String id_surat, String no_surat, String klasifikasi_surat, String tersier, String derajat_surat, String jenis_naskah_dinas, String asal, String tgl_surat, String tujuan, String perihal, String lampiran, String isi_ringkas, String file_surat, String no_agenda, String nama, String id_level) {
+    public DataSurat(String id_surat, String no_surat, String klasifikasi_surat, String tersier, String derajat_surat, String jenis_naskah_dinas, String asal, String tgl_surat, String tujuan, String perihal, String lampiran, String isi_ringkas, String file_surat, String no_agenda, String nama, String id_level, String nama_satker, String keterangan_instansi, String status) {
         this.id_surat = id_surat;
         this.no_surat = no_surat;
         this.klasifikasi_surat = klasifikasi_surat;
@@ -23,6 +23,9 @@ public class DataSurat {
         this.no_agenda = no_agenda;
         this.nama= nama;
         this.id_level= id_level;
+        this.nama_satker= nama_satker;
+        this.keterangan_instansi= keterangan_instansi;
+        this.status= status;
     }
 
     public String getId_surat() {
@@ -151,5 +154,29 @@ public class DataSurat {
 
     public void setId_level(String id_level) {
         this.id_level = id_level;
+    }
+
+    public String getNama_satker() {
+        return nama_satker;
+    }
+
+    public void setNama_satker(String nama_satker) {
+        this.nama_satker = nama_satker;
+    }
+
+    public String getKeterangan_instansi() {
+        return keterangan_instansi;
+    }
+
+    public void setKeterangan_instansi(String keterangan_instansi) {
+        this.keterangan_instansi = keterangan_instansi;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
     }
 }

@@ -1,12 +1,12 @@
 package com.example.myapplication.data;
 
 public class DataDisposisi {
-    private String id_disposisi,id_surat, no_surat, asal, tujuan, tersier, derajat_surat, jenis_naskah_dinas, tgl_disposisi, perihal, lampiran, isi_disposisi, file_disposisi, no_agenda, nama, id_level;
+    private String id_disposisi,id_surat, no_surat, asal, tujuan, tersier, derajat_surat, jenis_naskah_dinas, tgl_disposisi, perihal, lampiran, isi_disposisi, file_disposisi, no_agenda, nama, id_level, nama_asal, status_disposisi, status_buat;
 
     public DataDisposisi() {
     }
 
-    public DataDisposisi(String id_disposisi, String id_surat, String no_surat, String tujuan, String tersier, String derajat_surat, String jenis_naskah_dinas, String asal, String tgl_disposisi, String perihal, String lampiran, String isi_disposisi, String file_disposisi, String no_agenda, String nama, String id_level) {
+    public DataDisposisi(String id_disposisi, String id_surat, String no_surat, String tujuan, String tersier, String derajat_surat, String jenis_naskah_dinas, String asal, String tgl_disposisi, String perihal, String lampiran, String isi_disposisi, String file_disposisi, String no_agenda, String nama, String id_level, String nama_asal, String status_disposisi, String status_buat) {
         this.id_disposisi = id_disposisi;
         this.id_surat = id_surat;
         this.no_surat = no_surat;
@@ -23,6 +23,9 @@ public class DataDisposisi {
         this.no_agenda = no_agenda;
         this.nama= nama;
         this.id_level= id_level;
+        this.nama_asal= nama_asal;
+        this.status_disposisi= status_disposisi;
+        this.status_buat= status_buat;
     }
 
     public String getId_surat() {
@@ -151,5 +154,29 @@ public class DataDisposisi {
 
     public void setId_level(String id_level) {
         this.id_level = id_level;
+    }
+
+    public String getNama_asal() {
+        return nama_asal;
+    }
+
+    public void setNama_asal(String nama_asal) {
+        this.nama_asal = nama_asal;
+    }
+
+    public String getStatus_disposisi() {
+        return status_disposisi;
+    }
+
+    public void setStatus_disposisi(String status_disposisi) {
+        this.status_disposisi = status_disposisi;
+    }
+
+    public String getStatus_buat() {
+        return status_buat;
+    }
+
+    public void setStatus_buat(String status_buat) {
+        this.status_buat = status_buat;
     }
 }

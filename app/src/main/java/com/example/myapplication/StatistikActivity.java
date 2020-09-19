@@ -18,6 +18,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.example.myapplication.app.AppController;
+import com.example.myapplication.util.Server;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -34,17 +35,17 @@ public class StatistikActivity extends AppCompatActivity {
 
     String id, monthstr, username;
     int success;
-    int monthat, yearat, tujuan, month;
+    int monthat, yearat, tujuan, month, month_pilihan, tahun_pilihan;
     String tag_json_obj = "json_obj_req";
     private static final String TAG = StatistikActivity.class.getSimpleName();
     SharedPreferences sharedpreferences;
     TextView txt_bulan, txt_tahun;
     public static final String TAG_ID = "id";
     public static final String TAG_USERNAME = "username";
-    private static String url_select_jumlah_surat_masuk 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_surat_masuk.php";
-    private static String url_select_jumlah_surat_keluar 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_surat_keluar.php";
-    private static String url_select_jumlah_disposisi_masuk 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_disposisi_masuk.php";
-    private static String url_select_jumlah_disposisi_keluar 	 = "http://192.168.1.64/php_siap_bali/select_jumlah_disposisi_keluar.php";
+    private static String url_select_jumlah_surat_masuk 	 = Server.URL + "select_jumlah_surat_masuk.php";
+    private static String url_select_jumlah_surat_keluar 	 = Server.URL + "select_jumlah_surat_keluar.php";
+    private static String url_select_jumlah_disposisi_masuk 	 = Server.URL + "select_jumlah_disposisi_masuk.php";
+    private static String url_select_jumlah_disposisi_keluar 	 = Server.URL + "select_jumlah_disposisi_keluar.php";
 
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
@@ -96,21 +97,20 @@ public class StatistikActivity extends AppCompatActivity {
 
         txt_bulan.setText(monthstr);
         txt_tahun.setText(Integer.toString(yearat));
-        select_jumlah_surat_masuk(tujuan,monthat,yearat);
-        select_jumlah_surat_keluar(username,monthat,yearat);
+        select_jumlah_surat_masuk(monthat,yearat);
+        select_jumlah_surat_keluar(monthat,yearat);
         select_jumlah_disposisi_masuk(tujuan,monthat,yearat);
-        select_jumlah_disposisi_keluar(username,monthat,yearat);
+        select_jumlah_disposisi_keluar(Integer.parseInt(id),monthat,yearat);
 
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
 
-        tvDateResult = (TextView) findViewById(R.id.tahun);
-        btDatePicker = (Button) findViewById(R.id.bt_datepicker);
-        btDatePicker.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showDateDialog();
-            }
-        });
+//        btDatePicker = (Button) findViewById(R.id.bt_datepicker);
+//        btDatePicker.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                showDateDialog();
+//            }
+//        });
 
     }
 
@@ -139,10 +139,18 @@ public class StatistikActivity extends AppCompatActivity {
                 Calendar newDate = Calendar.getInstance();
                 newDate.set(year, monthOfYear, dayOfMonth);
 
+                month_pilihan = monthOfYear;
+                tahun_pilihan = year;
                 /**
                  * Update TextView dengan tanggal yang kita pilih
                  */
-                tvDateResult.setText("Tanggal dipilih : "+dateFormatter.format(newDate.getTime()));
+//                tvDateResult.setText(dateFormatter.format(newDate.getTime()));
+                txt_bulan.setText(month_pilihan);
+                txt_tahun.setText(tahun_pilihan);
+                select_jumlah_surat_masuk(monthat,yearat);
+                select_jumlah_surat_keluar(monthat,yearat);
+                select_jumlah_disposisi_masuk(tujuan,monthat,yearat);
+                select_jumlah_disposisi_keluar(Integer.parseInt(id),monthat,yearat);
             }
 
         },newCalendar.get(Calendar.YEAR), newCalendar.get(Calendar.MONTH), newCalendar.get(Calendar.DAY_OF_MONTH));
@@ -153,7 +161,7 @@ public class StatistikActivity extends AppCompatActivity {
         datePickerDialog.show();
     }
 
-    private void select_jumlah_surat_masuk(final int idx, final int bulanx, final int tahunx){
+    private void select_jumlah_surat_masuk( final int bulanx, final int tahunx){
         StringRequest strReq = new StringRequest(Request.Method.POST, url_select_jumlah_surat_masuk, new Response.Listener<String>() {
 
             @Override
@@ -197,7 +205,6 @@ public class StatistikActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters ke post url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("tujuan", String.valueOf(idx));
                 params.put("bulan", String.valueOf(bulanx));
                 params.put("tahun", String.valueOf(tahunx));
 
@@ -209,7 +216,7 @@ public class StatistikActivity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
     }
 
-    private void select_jumlah_surat_keluar(final String namax, final int bulanx, final int tahunx){
+    private void select_jumlah_surat_keluar(final int bulanx, final int tahunx){
         StringRequest strReq = new StringRequest(Request.Method.POST, url_select_jumlah_surat_keluar, new Response.Listener<String>() {
 
             @Override
@@ -253,7 +260,6 @@ public class StatistikActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters ke post url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("asal", String.valueOf(namax));
                 params.put("bulan", String.valueOf(bulanx));
                 params.put("tahun", String.valueOf(tahunx));
 
@@ -321,7 +327,7 @@ public class StatistikActivity extends AppCompatActivity {
         AppController.getInstance().addToRequestQueue(strReq, tag_json_obj);
     }
 
-    private void select_jumlah_disposisi_keluar(final String namax, final int bulanx, final int tahunx){
+    private void select_jumlah_disposisi_keluar(final int idx, final int bulanx, final int tahunx){
         StringRequest strReq = new StringRequest(Request.Method.POST, url_select_jumlah_disposisi_keluar, new Response.Listener<String>() {
 
             @Override
@@ -365,7 +371,7 @@ public class StatistikActivity extends AppCompatActivity {
             protected Map<String, String> getParams() {
                 // Posting parameters ke post url
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("asal", String.valueOf(namax));
+                params.put("asal", String.valueOf(idx));
                 params.put("bulan", String.valueOf(bulanx));
                 params.put("tahun", String.valueOf(tahunx));
 
